@@ -22,6 +22,7 @@ side .block-about{line-height:normal;}
 side .block-about p{margin:0.5em 0; color:#999;}
 side .block-about figure img{margin:0.5em 0; border-radius:2px;}
 side nav ul{list-style:none; line-height:1.5em;}
+side nav li:before{content:">"; font:normal 80%/1em "宋体"; margin:0 .3em; color: #999;}
 
 footer p{color:#aaa; font-size:75%; line-height:1.6em;}
 

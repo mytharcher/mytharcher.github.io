@@ -55,6 +55,7 @@
 <script src="/assets/js/hljs/languages/css.js"></script>
 <script src="/assets/js/hljs/languages/xml.js"></script>
 <script src="/assets/js/hljs/languages/javascript.js"></script>
+<script src="/assets/js/hljs/languages/php.js"></script>
 {% for script in page.scripts %}<script src="{{ script }}"></script>
 {% endfor %}
 

@@ -29,6 +29,7 @@ var site = {
 							var url = new elf.URL(location);
 							var query = url.getParameter('q');
 							if (query) {
+								query = decodeURIComponent(query);
 								document.title = elf().template(site.Text.TPL_SEARCH_TITLE, query);
 								customSearchControl.execute(query);
 							}

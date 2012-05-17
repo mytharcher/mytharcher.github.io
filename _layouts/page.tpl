@@ -46,7 +46,26 @@
 		<p>由于经常造各种轮子，所以自诩为前端造轮子工程师。各种形式主义，工具癖，规划控，纠结帝……以及重度拖延症患者。</p>
 	</div>
 	
-	<a href="http://github.com/mytharcher"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+	<div class="block block-license">
+		<h3>版权申明</h3>
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/cn/" target="_blank" class="hide-target-icon" title="本站(博客)作品全部采用知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆许可协议进行许可。转载请通知作者并注明出处。"><img alt="知识共享许可协议" src="http://i.creativecommons.org/l/by-nc-nd/2.5/cn/88x31.png" /></a></p>
+	</div>
+	
+	<div class="block block-fork">
+		<a href="http://github.com/mytharcher" class="hide-target-icon"><img src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+	</div>
+	
+	<div class="block block-thank">
+		<h3>Power by</h3>
+		<p>
+			<a href="http://disqus.com/" target="_blank" title="云评论服务">Disqus</a>,
+			<a href="http://github.com/" target="_blank">GitHub</a>,
+			<a href="http://www.google.com/cse/" target="_blank" title="自定义站内搜索">Google Custom Search</a>,
+			<a href="http://en.gravatar.com/" target="_blank" title="统一头像标识服务">Gravatar</a>,
+			<a href="http://softwaremaniacs.org/soft/highlight/en/">HighlightJS</a>,
+			<a href="http://github.com/mojombo/jekyll" target="_blank">jekyll</a>
+		</p>
+	</div>
 </side>
 
 <script src="http://elfjs.googlecode.com/files/elf-0.3.3-min.js"></script>

@@ -7,7 +7,8 @@ tags: CSS, Firefox, 样式
 
 之前发现[elf+js](http://elfjs.com/)中设置样式的一个bug，然后决定对所有css的样式属性设置和获取都加上单测case。这里先通过Firefox获得了一个全部元素支持的样式属性表，存下来备忘。
 
-|* Property Name *|* Value Type *|* Values *|
+| Property Name | Value Type | Values |
+|-|-|-|
 | background-attachment | String | scroll, fixed |
 | background-clip | String | border-box, padding-box, content-box |
 | background-color | Color |

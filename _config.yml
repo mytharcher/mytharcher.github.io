@@ -11,12 +11,16 @@ custom:
     category:
         thinking: 闭门思考
         problems: 问题记录
+        knowledge: 知识经验
     categories:
       - name:  thinking
         title: 闭门思考
 
       - name:  problems
         title: 问题记录
+
+      - name:  knowledge
+        title: 知识经验
 
 meta:
     authors:

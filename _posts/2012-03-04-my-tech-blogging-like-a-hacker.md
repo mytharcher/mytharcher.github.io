@@ -6,7 +6,7 @@ category: thinking
 
 说实话，我发现自己的确是个形式主义者，工具癖，规划控……就是不想静下来仔细思考认真沉淀最后生产出点有质量的内容，而且从小就是（我曾多次准备好一个练习本规划好用来如何写组词造句等，但第一页都没写完过）。再加上重度的拖延症，偶尔稍微纠结下，曾经写点技术积累的想法就彻底夭折了。
 
-但在用了[GitHub]这么一段时间后，对[Markdown]语法和[jekyll]建站托管的迷恋一发不可收拾，基本上达到了手里拿着一把榔头就准备到处去敲钉子的地步。于是琢磨着用这些东西再次开个博客稍微的积累点技术方面东西，自然的，也是对[WordPress]时代的一个告别：
+但在用了[GitHub][]这么一段时间后，对[Markdown]语法和[jekyll]建站托管的迷恋一发不可收拾，基本上达到了手里拿着一把榔头就准备到处去敲钉子的地步。于是琢磨着用这些东西再次开个博客稍微的积累点技术方面东西，自然的，也是对[WordPress]时代的一个告别：
 
 * 其实我不想维护数据库
 * 其实我只想生成静态的html
@@ -35,12 +35,4 @@ category: thinking
 
 今后，我会在这里记录开发中遇到和解决的各种问题，与技术有关的思考，姑且就当做一个代码笔记本了。不过回到开始说的，不管形式如何，努力坚持产出才是王道。
 
-[GitHub]: https://github.com/
-[jekyll]: https://github.com/mojombo/jekyll
-[Markdown]: http://daringfireball.net/projects/markdown/
-[WordPress]: http://wordpress.org/
-[Disqus]: http://disqus.com/
-[Google Picasa]: https://picasaweb.google.com/
-[Google Custom Search]: http://www.google.com/cse/
-[HighlightJS]: http://softwaremaniacs.org/soft/highlight/en/
-[Gravatar]: http://en.gravatar.com/
+-EOF-

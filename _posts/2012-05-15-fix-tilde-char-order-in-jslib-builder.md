@@ -37,7 +37,3 @@ tags: 波浪号, 排序, PHP
 	}
 
 -EOF-
-
-[elf+js]: http://elfjs.com/
-[jslib]: http://github.com/elfjs/jslib
-[jslib-builder]: http://github.com/elfjs/jslib-builder

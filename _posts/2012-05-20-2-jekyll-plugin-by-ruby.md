@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 写了两个jekyll插件，算是Ruby初体验
-categories: knowledge
+category: knowledge
 tags: Ruby, jekyll, 插件, Markdown, 压缩
 ---
 

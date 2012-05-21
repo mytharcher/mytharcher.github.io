@@ -26,7 +26,7 @@ module Jekyll
     def get_references()
       # read and cache content of _references.md
       if @@refs_content.nil?
-        refs_path = File.join(Dir.pwd, "_references.md")
+        refs_path = File.join(Jekyll::DEFAULTS['source'], "_references.md")
         @@refs_content = if File.exist?(refs_path) then File.read(refs_path) 
                          else "" end
       end

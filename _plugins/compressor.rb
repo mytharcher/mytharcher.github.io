@@ -26,7 +26,7 @@ module Jekyll
   module Compressor
 
     def compress_html(content)
-      content.gsub(/>\s+/, '>').gsub(/\s+</, '<');
+      content.gsub(/>\s+</, '><')
     end
 
     # Really writing process

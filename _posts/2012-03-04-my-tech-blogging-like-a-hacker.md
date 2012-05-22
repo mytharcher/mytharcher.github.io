@@ -36,3 +36,13 @@ category: thinking
 今后，我会在这里记录开发中遇到和解决的各种问题，与技术有关的思考，姑且就当做一个代码笔记本了。不过回到开始说的，不管形式如何，努力坚持产出才是王道。
 
 -EOF-
+
+[Disqus]: http://disqus.com/
+[GitHub]: https://github.com/
+[Google Custom Search]: http://www.google.com/cse/
+[Google Picasa]: https://picasaweb.google.com/
+[Gravatar]: http://gravatar.com/
+[HighlightJS]: http://softwaremaniacs.org/soft/highlight/en/
+[jekyll]: https://github.com/mojombo/jekyll
+[Markdown]: http://daringfireball.net/projects/markdown/
+[WordPress]: http://wordpress.org/

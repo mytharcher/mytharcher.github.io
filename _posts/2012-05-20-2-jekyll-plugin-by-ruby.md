@@ -52,6 +52,15 @@ tags: Ruby, jekyll, 插件, Markdown, 压缩
 
 总的来说Ruby这门语言设计的还是很不错的，兼有面向对象和函数式编程的各种优点，而又考虑了很多DSL的写法，给人很流畅很舒服的编程体验，比起Java甚至JS来说都可以更少的陷入计算机的逻辑思考方式里。以我两天就可以写实际代码的水平来看，原来学一门新的语言真的不难。
 
+---
+
+## Update
+
+**2012-05-22:**
+
+0. [Markdown references][]的原著插件问题原因搞明白了，就是对文件结尾没有启新行的话，追加的引用部分会合并到之前的最后一行里，导致无法解析为引用链接。
+0. 昨天上传到GitHub上以后发现插件没起作用，然后发了[Issue #557](https://github.com/mojombo/jekyll/issues/557)去问，结果最后找到答案[Issue #325](https://github.com/mojombo/jekyll/issues/325)是GitHub上现在因为安全的原因在生成Jekyll页面的时候限制了所有的用户插件。这真是个悲剧，以后所有的插件都只能线下使用，而不能集成到GitHub Pages里了。
+
 -EOF-
 
 [Markdown references]: https://gist.github.com/961336

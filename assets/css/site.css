@@ -25,8 +25,9 @@ side .block h3{margin:.5em 0;}
 side .block a{margin:0px;}
 side .block-about p{margin:0.5em 0; color:#999;}
 side .block-about figure img{border-radius:2px;}
-side .block-about figcaption{margin:0.5em 0; border-radius:2px;}
-side .block-about figcaption:after{content:'<mytharcher@gmail.com>'; padding-left:.5em; color: #bbb; font-weight:bold;}
+side .block-about figcaption{margin:0.2em 0;}
+side .block-about figcaption:after{content:'<mytharcher@gmail.com>'; padding-left:.5em; color: #bbb; font-weight:bold; opacity: 0; transition:opacity .5s; -moz-transition:opacity .5s; -webkit-transition:opacity .5s;}
+side .block-about:hover figcaption:after{opacity: 1;}
 side .block-fork{position: absolute; top:0; right:0; margin: 0;}
 
 footer p{color:#aaa; font-size:75%; line-height:1.6em;}

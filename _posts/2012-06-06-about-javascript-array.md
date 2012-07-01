@@ -21,4 +21,12 @@ tags: JavaScript, Array, 数组
 
 这是个灵机一动想出来的方法，结果是互换成功了，当然性能没做过多考虑。
 
+这样也可以：
+
+	var arr = [1, 2, 3, 4, 5];
+	arr.splice.apply(arr, [1, 0].concat(arr.splice(3, 2)));
+	// [1, 4, 5, 2, 3]
+
+而且还可以置换任意多个元素。
+
 -EOF-

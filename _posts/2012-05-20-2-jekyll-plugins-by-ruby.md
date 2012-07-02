@@ -2,7 +2,7 @@
 layout: post
 title: 写了两个jekyll插件，算是Ruby初体验
 category: knowledge
-tags: Ruby, jekyll, 插件, Markdown, 压缩
+tags: [Ruby, jekyll, 插件, Markdown, 压缩]
 ---
 
 周末无聊继续折腾[jekyll](https://github.com/mojombo/jekyll)，越来越发现[GitHub](https://github.com/)上很多Ruby的东西。尤其是jekyll，我一直在找一些有用的插件，却一点都看不懂那些代码。比如昨天看到官方的插件列表里有[Markdown references][]，用来将所有引用链接放在一个文件里统一管理。这个早就想用，于是就下过来看看，结果很容易就没跑起来。插件的代码很短，但是对于完全不认识的Ruby，都看了几遍也发现不了问题。然后就先搁置了，又想到找另一个可以用来压缩jekyll输出的HTML，JS和CSS的插件，搜了很多贴果断没有合适的，为此我还去项目主页顶了一个Issue（[#476](https://github.com/mojombo/jekyll/issues/476)）。于是作为一个程序员脑子里立马就不安分的产生了**自己去写一个的邪念**！当然直接的后果就是周末两天都耗费在连注释加起来不到100行的Ruby代码上了，不过顺便算是入门级学习了Ruby，也把jekyll的代码看明白了大半。

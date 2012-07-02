@@ -2,7 +2,7 @@
 layout: post
 title: 记下最近碰到的几个数组问题
 category: knowledge
-tags: JavaScript, Array, 数组
+tags: [JavaScript, Array, 数组]
 ---
 
 ### 迭代

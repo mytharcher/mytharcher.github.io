@@ -2,7 +2,7 @@
 layout: post
 title: 雅黑字体文字显示异常问题
 category: problems
-tags: 雅黑, 微软雅黑, 字体, Chrome, Firefox
+tags: [雅黑, 微软雅黑, 字体, Chrome, Firefox]
 ---
 
 晚上发现一个诡异的问题，soso发了个自己的网站[雷囧](http://leijiong.com/)，结果点进去一片天窗，到处都是空白。我以为是兼容性或者网络问题，也没换浏览器测，但其他人都表示正常。

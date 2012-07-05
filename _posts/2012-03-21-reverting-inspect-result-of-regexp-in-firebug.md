@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Firebug监控正则结果一直在反转
-category: problem
+category: problems
 tags: [cookie, 路径]
 ---
 

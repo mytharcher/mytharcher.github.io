@@ -12,3 +12,5 @@ tags: [cookie, 路径]
 解决：规避使用cookie是在不同路径下设置同一个键。
 
 -EOF-
+
+{% include references.md %}

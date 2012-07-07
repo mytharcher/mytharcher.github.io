@@ -15,7 +15,7 @@ tags: Shell
 
 ### 分析文件内容合并输出
 
-这其实是[ER](http://www.errorrik.com/er/)里的一个例子，项目中每个功能都用零散的JS文件开发，然后通过一个文件中写`document.write`全部的`<script>`标签进行引入，到上线的时候再通过脚本把所有引用的文件合并打包成一个。
+这其实是[ER][]里的一个例子，项目中每个功能都用零散的JS文件开发，然后通过一个文件中写`document.write`全部的`<script>`标签进行引入，到上线的时候再通过脚本把所有引用的文件合并打包成一个。
 
 Erik原来是这么写的：
 
@@ -35,3 +35,5 @@ Erik原来是这么写的：
 	rm -rf abc/* #成功
 
 -EOF-
+
+{% include references.md %}

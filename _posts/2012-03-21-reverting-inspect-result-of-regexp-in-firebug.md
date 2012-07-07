@@ -18,3 +18,5 @@ tags: [cookie, 路径]
 解决：分清全局模式使用的场合。
 
 -EOF-
+
+{% include references.md %}

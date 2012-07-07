@@ -31,7 +31,7 @@ tags: [JavaScript, Array, 数组]
 
 ### 可继承性
 
-在设计[jslib](https://github.com/elfjs/jslib/)时考虑数组扩展与继承的问题，参考了一些数组继承的文章，并实验得出下面的判断逻辑：
+在设计[jslib][]时考虑数组扩展与继承的问题，参考了一些数组继承的文章，并实验得出下面的判断逻辑：
 
 	/**
 	 * 数组是否可继承
@@ -66,3 +66,5 @@ tags: [JavaScript, Array, 数组]
 0. [How To Subclass The JavaScript Array Object](http://dean.edwards.name/weblog/2006/11/hooray/)
 
 -EOF-
+
+{% include references.md %}

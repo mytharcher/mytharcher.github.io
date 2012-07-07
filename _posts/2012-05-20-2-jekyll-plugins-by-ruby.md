@@ -5,7 +5,7 @@ category: knowledge
 tags: [Ruby, jekyll, 插件, Markdown, 压缩]
 ---
 
-周末无聊继续折腾[jekyll](https://github.com/mojombo/jekyll)，越来越发现[GitHub](https://github.com/)上很多Ruby的东西。尤其是jekyll，我一直在找一些有用的插件，却一点都看不懂那些代码。比如昨天看到官方的插件列表里有[Markdown references][]，用来将所有引用链接放在一个文件里统一管理。这个早就想用，于是就下过来看看，结果很容易就没跑起来。插件的代码很短，但是对于完全不认识的Ruby，都看了几遍也发现不了问题。然后就先搁置了，又想到找另一个可以用来压缩jekyll输出的HTML，JS和CSS的插件，搜了很多贴果断没有合适的，为此我还去项目主页顶了一个Issue（[#476](https://github.com/mojombo/jekyll/issues/476)）。于是作为一个程序员脑子里立马就不安分的产生了**自己去写一个的邪念**！当然直接的后果就是周末两天都耗费在连注释加起来不到100行的Ruby代码上了，不过顺便算是入门级学习了Ruby，也把jekyll的代码看明白了大半。
+周末无聊继续折腾[jekyll][]，越来越发现[GitHub][]上很多Ruby的东西。尤其是jekyll，我一直在找一些有用的插件，却一点都看不懂那些代码。比如昨天看到官方的插件列表里有[Markdown references][]，用来将所有引用链接放在一个文件里统一管理。这个早就想用，于是就下过来看看，结果很容易就没跑起来。插件的代码很短，但是对于完全不认识的Ruby，都看了几遍也发现不了问题。然后就先搁置了，又想到找另一个可以用来压缩jekyll输出的HTML，JS和CSS的插件，搜了很多贴果断没有合适的，为此我还去项目主页顶了一个Issue（[#476](https://github.com/mojombo/jekyll/issues/476)）。于是作为一个程序员脑子里立马就不安分的产生了**自己去写一个的邪念**！当然直接的后果就是周末两天都耗费在连注释加起来不到100行的Ruby代码上了，不过顺便算是入门级学习了Ruby，也把jekyll的代码看明白了大半。
 
 好了，不废话，介绍下这两个新手级的插件。
 
@@ -29,7 +29,7 @@ tags: [Ruby, jekyll, 插件, Markdown, 压缩]
 
 另外说说有关Ruby初体验的感觉。
 
-在之前已经跟Ruby遭遇过两次，一次是第一次在本地运行jekyll，这就要装Ruby，然后发现由于被墙而下不全gem导致各种诡异的问题。第二次是想用[Jsduck](https://github.com/senchalabs/jsduck)来生成[jslib](http://github.com/elfjs/jslib)的API文档，但也由于Ruby以及作者导致的中文问题纠结了很久，直到后来花了近两个星期通过Issue（[#145](https://github.com/senchalabs/jsduck/issues/145)）推动作者解决。但这两次都从未动过一行Ruby代码。
+在之前已经跟Ruby遭遇过两次，一次是第一次在本地运行jekyll，这就要装Ruby，然后发现由于被墙而下不全gem导致各种诡异的问题。第二次是想用[JSDuck][]来生成[jslib][]的API文档，但也由于Ruby以及作者导致的中文问题纠结了很久，直到后来花了近两个星期通过Issue（[#145](https://github.com/senchalabs/jsduck/issues/145)）推动作者解决。但这两次都从未动过一行Ruby代码。
 
 这次真要逼到自己去写，于是在网上学了个入门。以前没仔细看的时候觉得Ruby的语法太奇怪，但这次通过实践学习下来觉得其中还是有很多语法是不错的，甚至比JS还简单有趣。
 
@@ -64,3 +64,5 @@ tags: [Ruby, jekyll, 插件, Markdown, 压缩]
 -EOF-
 
 [Markdown references]: https://gist.github.com/961336
+
+{% include references.md %}

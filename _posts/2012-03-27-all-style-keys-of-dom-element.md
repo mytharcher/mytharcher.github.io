@@ -5,7 +5,7 @@ category: knowledge
 tags: [CSS, Firefox, 样式]
 ---
 
-之前发现[elf+js](http://elfjs.com/)中设置样式的一个bug，然后决定对所有css的样式属性设置和获取都加上单测case。这里先通过Firefox获得了一个全部元素支持的样式属性表，存下来备忘。
+之前发现[elf+js][]中设置样式的一个bug，然后决定对所有css的样式属性设置和获取都加上单测case。这里先通过Firefox获得了一个全部元素支持的样式属性表，存下来备忘。
 
 | Property Name | Value Type | Values |
 |-|-|-|
@@ -112,3 +112,5 @@ tags: [CSS, Firefox, 样式]
 其中以`-moz-`开头的FF私有属性暂时忽略掉了。后续需要测试常用属性表中的所有内容。
 
 -EOF-
+
+{% include references.md %}

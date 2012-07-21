@@ -40,7 +40,7 @@
 	<div class="block block-about">
 		<h3>关于</h3>
 		<figure>
-			<img src="http://www.gravatar.com/avatar/1cd8c12591616d8c22aaa624f8c07834?s=48" />
+			<img src="http://cn.gravatar.com/avatar/1cd8c12591616d8c22aaa624f8c07834?s=48" />
 			<figcaption><strong>mytharcher</strong></figcaption>
 		</figure>
 		<p>由于经常造各种轮子，所以自诩为前端造轮子工程师。各种形式主义，工具癖，规划控，纠结帝……以及重度拖延症患者。</p>
@@ -52,11 +52,11 @@
 	</div>
 	
 	<div class="block block-fork">
-		<a href="http://github.com/mytharcher" class="hide-target-icon"><img src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+		<a href="https://github.com/mytharcher"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 	</div>
 	
 	<div class="block block-thank">
-		<h3>Power by</h3>
+		<h3>Powered by</h3>
 		<p>
 			<a href="http://disqus.com/" target="_blank" title="云评论服务">Disqus</a>,
 			<a href="http://github.com/" target="_blank">GitHub</a>,

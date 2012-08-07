@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test iframe A</title>
+</head>
+
+<body>
+<button type="button" onclick="toggle('AbsFloat')">显示/隐藏固定高度绝对定位层</button>
+<button type="button" onclick="toggle('AbsFloat2')">显示/隐藏不固定高度绝对定位层</button>
+<div id="AbsFloat" style="width:200px;height:60px;position:absolute;left:200px;top:40px;background:#933;display:none;"></div>
+<div id="AbsFloat2" style="width:200px;position:absolute;left:400px;top:40px;background:#48a;display:none;">我<br />一<br />点<br />也<br />不<br />高</div>
+<script type="text/javascript">
+function toggle(id) {
+	var div = document.getElementById(id);
+	// if (div.offsetLeft != 200) {
+	// 	div.style.left = '200px';
+	// 	div.style.top = 0;
+	// } else {
+	// 	div.style.left = '-10000px';
+	// 	div.style.top = '-10000px';
+	// }
+	if (div.style.display == 'none') {
+		div.style.display = '';
+	} else {
+		div.style.display = 'none';
+	}
+}
+</script>
+</body>
+</html>

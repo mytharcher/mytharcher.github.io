@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Iframe高度自适应</title>
+</head>
+
+<body>
+<h3>需要实时自适应的iframe</h3>
+<p><button type="button" id="ResetSwitchButton">iframe高度归零复位[<span id="ResetSwitchStatus">0</span>]</button><label>html.scrollHeight</label><input id="htmlHeight" readonly style="color:red" /><label>body.scrollHeight</label><input id="bodyHeight" readonly style="color:red" /></p>
+<iframe id="A" border="0" frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" vspace="0" src="iframe.html" style="width:100%;border:1px solid #ccc;" height="0" onload="startup()"></iframe>
+<script type="text/javascript">
+function changeHeight() {
+	var a = document.getElementById('A');
+	var aDoc = a.contentWindow.document;
+	
+	var statusEl = document.getElementById('ResetSwitchStatus');
+	if (parseInt(statusEl.innerHTML, 10)) {
+		a.height = 0;
+	}
+	a.height = Math.max(aDoc.documentElement.scrollHeight, aDoc.body.scrollHeight);
+}
+
+function showHeight () {
+	var a = document.getElementById('A');
+	var aDoc = a.contentWindow.document;
+	
+	document.getElementById('htmlHeight').value = aDoc.documentElement.scrollHeight;
+	document.getElementById('bodyHeight').value = aDoc.body.scrollHeight;
+}
+
+function startup() {
+	document.getElementById('ResetSwitchButton').onclick = function () {
+		var statusEl = document.getElementById('ResetSwitchStatus');
+		statusEl.innerHTML = Number(!parseInt(statusEl.innerHTML, 10));
+	};
+
+	setInterval(changeHeight, 2000);
+
+	setInterval(showHeight, 100);
+
+}
+</script>
+</body>
+</html>

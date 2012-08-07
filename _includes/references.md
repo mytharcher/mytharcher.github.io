@@ -12,4 +12,7 @@
 [jslib]: https://github.com/elfjs/jslib/
 [jslib-builder]: http://github.com/elfjs/jslib-builder/
 [Markdown]: http://daringfireball.net/projects/markdown/
+[node.js]: http://nodejs.org/
+[SimpleGray]: https://github.com/mytharcher/SimpleGray
+[SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
 [WordPress]: http://wordpress.org/

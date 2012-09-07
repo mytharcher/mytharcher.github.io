@@ -2,7 +2,6 @@
 layout: page
 
 pageClass: page-type-post
-
 ---
 
 <div class="trace">/ <a href="/">{{ site.name }}</a> / {{ page.title }}</div>

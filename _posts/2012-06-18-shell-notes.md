@@ -39,6 +39,10 @@ Erik原来是这么写的：
 	find . -name * # 报错
 	find . -name '*' # 成功
 
+### 批量修改文件后缀
+
+	ls | grep markdown | awk -F'.' '{print $1}' | xargs -i mv {}.markdown {}.md
+
 -EOF-
 
 {% include references.md %}

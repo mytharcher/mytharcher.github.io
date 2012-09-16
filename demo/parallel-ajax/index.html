@@ -42,12 +42,18 @@ var ParallelLoader = {
 			loader.url = list[i];
 			loader.onload = me._onSuccessHander.bind(loader);
 			me.loaders[list[i]] = loader;
+			
+			// IE的差异
+			baidu.ajax.get(loader.url, loader.onload);
 		}
 		
+		/*
+		IE 的差异
 		for (var i in me.loaders) {
 			loader = me.loaders[i];
 			baidu.ajax.get(loader.url, loader.onload);
 		}
+		*/
 	},
 
 	_onSuccessHander: function (xhr) {

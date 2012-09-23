@@ -1,0 +1,14 @@
+---
+layout: demo
+title : 通过设置iframe的src重新加载iframe
+---
+<p><button type="button" id="Reload">点击重新加载</button></p>
+<iframe id="A" border="0" frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" vspace="0" src="about:blank" style="border:1px solid #ccc;"></iframe>
+<script type="text/javascript">
+document.getElementById('Reload').onclick = function () {
+	var iframe = document.getElementById('A');
+	iframe.src = 'about:blank';
+	iframe.contentWindow.document.write('<script src="reload.js"><\/script>');
+	iframe.contentWindow.document.close();
+};
+</script>

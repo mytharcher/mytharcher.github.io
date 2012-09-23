@@ -1,0 +1,16 @@
+---
+layout: demo
+title : 没有用户信任授权的域名下window.open返回值为null
+---
+<p><button type="Button" onclick="openWindow()">点击在新窗口打开elfjs.com</button></p>
+<script type="text/javascript">
+function openWindow() {
+	var win = window.open('http://elfjs.com/');
+	alert(win);
+}
+
+var win = window.open('http://elfjs.com/');
+alert(win);
+</script>
+</body>
+</html>

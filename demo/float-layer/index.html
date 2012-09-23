@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网易无敌的浮动层解决方案揭密</title>
+
+<style type="text/css">
+html{height:100%; overflow:hidden; border:0;}
+body{margin:0; height:100%; overflow:hidden; font-size:16px;}
+button{font-size:16px;}
+#mainbody{width:100%; height:100%; overflow-y:scroll; overflow-x:auto;}
+#main{margin:4px; height:2000px; background:#ccc;}
+#transparent{display:none; position:absolute; width:100%; height:100%; background:#fff; filter:alpha(opacity=40); opacity:0.4;}
+#transparent.active{display:block;}
+.absbox{display:none; position:absolute; background:#fff;}
+.absbox.active{display:block;}
+
+#addnew{width:360px; border:1px solid #99a8bd;}
+#addnew h3{margin:0; padding:5px 5px 5px 15px; background:#e9f2fb; font-size:14px; cursor:move;}
+#addnew h3 span.fr{float:right; margin-top:-3px; cursor:pointer;}
+#addnew h3 button{padding:0; border:0; background:#e9f2fb;}
+#addnew table{width:320px; margin:10px 15px 15px 15px; border:0;}
+#addnew th,#addnew td{border:0; height:auto; line-height:22px; padding:3px 0; vertical-align:top;}
+#addnew th{font-weight:bold;}
+#addnew td{width:65%;}
+#addnew input{width:100%;}
+#addnew button{line-height:normal;}
+</style>
+
+<script type="text/javascript" language="javascript">
+var common={
+
+bind:function(o,ev,fn){
+	if (document.all){
+		o.attachEvent('on'+ev,fn);////////////IE绑定上但是fn里this指向window
+	}
+	else{
+		o.addEventListener(ev,fn,false);
+	}
+	return o;
+},
+
+addClass:function (el,cls){
+	var arrCls=cls.split(/[ ]+/);
+	if(el.className){
+		for(var i=0;i<arrCls.length;i++){
+			if(el.className.indexOf(arrCls[i])>=0){
+				cls=cls.replace(new RegExp('[ ]*'+arrCls[i]+'[ ]*'),' ');////////有缺陷
+			}
+		}
+		el.className=[el.className].concat(cls).join(' ');
+	}
+	else{
+		el.className=cls;
+	}
+},
+
+removeClass:function (el,cls){
+	if(el.className){
+		if(el.className.indexOf(cls)>=0){
+			el.className=el.className.replace(new RegExp('[ ]*'+cls+'[ ]*','g'),' ');
+		}
+	}
+}
+
+};
+
+function init(){
+	var drag1=document.getElementById('addnew');
+	var drag1bar=drag1.getElementsByTagName('h3')[0];
+	new DragObject({module:drag1,handle:drag1bar});
+	
+	var addnewPop=new Popup({module:drag1,background:document.getElementById('transparent')});
+	document.getElementById('addnew_btnclz').onclick=addnewPop.hide;
+	document.getElementById('switch').onclick=addnewPop.show;
+}
+
+common.bind(window,'load',init);
+
+
+function DragObject(args){
+	var module=typeof(args.module)=='string'?document.getElementById(args.module):args.module;
+	var handle=typeof(args.handle)=='string'?document.getElementById(args.handle):args.handle;
+	
+	function startDrag(e){
+		var e=e||window.event;
+		//var elem=e.target||e.srcElement;
+		
+		document.onmousemove=onDrag;
+		document.onmouseup=stopDrag;
+		
+		//储存当前坐标差值参数
+		module.subX=module.offsetLeft-e.clientX;
+		module.subY=module.offsetTop-e.clientY;
+		
+		return false;
+	}
+	
+	function onDrag(e){
+		e=e||window.event;
+		
+		module.style.left=module.subX+e.clientX+'px';
+		module.style.top=module.subY+e.clientY+'px';
+		
+		return false;
+	}
+	
+	function stopDrag(){
+		document.onmousemove=null;
+		document.onmouseup=null;
+	}
+	
+	handle.onmousedown=startDrag;
+	
+}
+
+function Popup(args){
+	var module=typeof(args.module)=='string'?document.getElementById(args.module):args.module;
+	var background=args.background?(typeof(args.background)=='string'?document.getElementById(args.background):args.background):null;
+	
+	this.show=function(){
+		common.addClass(module,'active');
+		if(background){
+			common.addClass(background,'active');
+		}
+	};
+	
+	this.hide=function(){
+		common.removeClass(module,'active');
+		if(background){
+			common.removeClass(background,'active');
+		}
+	};
+}
+</script>
+</head>
+
+<body>
+<div id="absbox">
+	<div id="transparent" class="active"></div>
+	<div id="addnew" class="absbox active">
+		<h3>拖到滚动条上试试</h3>
+		<form>
+			<table>
+				<tr>
+					<th>用户：</th>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<th>密码：</th>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td><button type="submit">确定</button>　<button type="reset" id="addnew_btnclz">取消</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+<div id="mainbody">
+	<div id="main">
+<button type="button" id="switch">
+点我，就再弹出来<br /><br /><br />
+另外也知道为什么用button了吧，呵呵<br />
+<br />
+这<br />
+个<br />
+层<br />
+要<br />
+多<br />
+长<br />
+就<br />
+有<br />
+多<br />
+长<br />
+，<br />
+我<br />
+把<br />
+他<br />
+设<br />
+成<br />
+了<br />
+2<br />
+0<br />
+0<br />
+0<br />
+象<br />
+素<br />
+，<br />
+你<br />
+可<br />
+以<br />
+拖<br />
+拖<br />
+看<br />
+他<br />
+有<br />
+多<br />
+长<br />
+，<br />
+你<br />
+的<br />
+屏<br />
+幕<br />
+肯<br />
+定<br />
+没<br />
+那<br />
+么<br />
+大<br />
+分<br />
+辨<br />
+率<br />
+吧<br />
+，<br />
+哈<br />
+哈<br />
+！
+</button>
+	</div>
+</div>
+</body>
+</html>

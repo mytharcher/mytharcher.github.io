@@ -25,7 +25,7 @@ tags:
 
 按照程序的流程，应该分为3个步骤：加载，执行，执行完毕通知。
 
-![加载步骤](/assets/img/load-script/load-step.jgp)
+![加载步骤](/assets/img/load-script/load-step.jpg)
 
 ## 解决方案
 

@@ -45,6 +45,10 @@ var site = {
 			content = content.join('</p>').split(/<\/article>\s*<div id="disqus_thread" class="doc-comments">/)[0];
 			this.query('>.article-content').html(content);
 			this.attr('content-loaded', 1);
+			
+			this.query('pre').forEach(function (item) {
+				hljs.highlightBlock(item);
+			});
 		},
 		
 		onGCSEAPILoad: function () {
@@ -80,9 +84,7 @@ var site = {
 
 
 elf(function () {
-	elf('pre').forEach(function (item) {
-		hljs.highlightBlock(item);
-	});
+	hljs.initHighlighting();
 	
 	var module = document.body.className.replace(/page-type-/g, '').split(' ');
 	module.forEach(function (item) {

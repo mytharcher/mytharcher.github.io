@@ -47,22 +47,19 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 
 这个例子假设在你的应用目录有这样一个文件`controllers/something.js`：
 
-	exports.get = {
-		// 过滤器后面再介绍
-		filters: ['authorization'],
-		// 所有真正的业务处理都写在这里
-		process: function (req, res, next) {
-			res.send(200, 'Got you!');
-		}
-	};
-
-那么客户端使用`GET`方式请求`http://yourapp/something`的时候，首先会去找`filters/authorization.js`进行验证检查，通过后正常返回`200`成功状态，并在页面上显示`Got you!`。
-
-如果不需要过滤器，可以简单的写为一个函数：
-
 	exports.get = function (req, res, next) {
 		res.send(200, 'Simple getting.');
 	};
+
+如果需要在客户端使用`GET`方式请求`http://yourapp/something`的时，先使用`filters/authorization.js`进行验证检查，可以简单的定义一个过滤器：
+
+	exports.get = function (req, res, next) {
+		res.send(200, 'Got you!');
+	};
+	// 添加过滤器
+	exports.get.filters = ['authorization'];
+
+这样当过滤器`authorization`通过后会继续正常处返回`200`成功状态，并在页面上显示`Got you!`。
 
 对于每个RESTful的资源，由于同一个URL只映射一个文件，所有增删改查都定义在一个文件中，例如：
 
@@ -81,7 +78,7 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 	// 你可以定义其他`post`和`delete`的路由处理
 	// ...
 
-如果不使用`get`/`post`/`put`/`delete`定义，那么可以直接`exports`一个函数，处理所有方法在这个URL上的请求：
+如果不想使用`get`/`post`/`put`/`delete`定义，那么可以直接`exports`一个函数，处理所有方法在这个URL上的请求：
 
 	module.exports = function (req, res, next) {
 		// all your process
@@ -106,7 +103,7 @@ Rainbow的controllers暂时只为传统的URL请求设计，即现在支持`/pat
 			next();
 		} else {
 			console.log('out of session');
-			// 基于express的异步过滤器
+			// 异步过滤器
 			db.User.find().success(function (user) {
 				if (!user) {
 					res.send(403);

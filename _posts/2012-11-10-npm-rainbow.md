@@ -122,8 +122,8 @@ Rainbow的controllers暂时只为传统的URL请求设计，即现在支持`/pat
 Rainbow会默认使用应用目录下的`controllers/`和`filters/`目录寻找路由控制器和过滤器。如果不希望是这两个目录可以在初始化的时候传入一个配置对象进行修改：
 
 	rainbow.route(app, {
-		controllers: 'your/controllers/path',
-		filters: 'your/filters/path'
+		controllers: '/your/controllers/path',
+		filters: '/your/filters/path'
 	});
 
 ### 有问题？ ###

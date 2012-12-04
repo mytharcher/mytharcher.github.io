@@ -14,6 +14,7 @@ custom:
         thinking: 闭门思考
         problems: 问题记录
         knowledge: 知识经验
+        discovery: 日新月异
     categories:
       - name:  thinking
         title: 闭门思考
@@ -23,6 +24,9 @@ custom:
 
       - name:  knowledge
         title: 知识经验
+
+      - name:  discovery
+        title: 日新月异
 
 meta:
     author:

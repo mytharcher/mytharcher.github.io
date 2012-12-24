@@ -88,24 +88,20 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 
 Rainbow从0.1.0版本开始支持基于参数优化的URL（类似`/path/user/:id`）。现在你可以使用`params`这个属性来扩展定义当前controller的参数部分，之后就可以和Express原生定义一样在处理中使用参数部分，例如：
 
-```javascript
-exports.get = function (req, res, next) {
-	var id = req.params.id;
-	// your business
-};
+	exports.get = function (req, res, next) {
+		var id = req.params.id;
+		// your business
+	};
 
-exports.get.params = ':id?';
-```
+	exports.get.params = ':id?';
 
 对，你只需添加当前controller代表的URL之后的内容。你也可以使用正则表达式来进行参数自动分析，同样也只需添加controller代表的URL之后的规则：
 
-```javascript
-exports.get = function (req, res, next) {
-	console.log(req.params);
-}
+	exports.get = function (req, res, next) {
+		console.log(req.params);
+	}
 
-exports.get.params = /(\d+)(?:\.\.(\d+))?/;
-```
+	exports.get.params = /(\d+)(?:\.\.(\d+))?/;
 
 但是使用正则的时候请务必注意，**不要**使用作为起始判定的`^`和作为结束判定的`$`，这会导致rainbow无法解析这个参数。不过用在集合取反判定里的`^`是没有问题的，例如：`[^a-z]`。
 

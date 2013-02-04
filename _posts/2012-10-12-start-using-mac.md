@@ -127,6 +127,19 @@ Apache的配置过程中，使用以下命令来启动和查看启动错误：
 
 众多人推荐的播放器：[MPlayerX](http://mplayerx.org/)，大部分格式无压力。
 
+要是听歌？iTunes反正我不会用，本地音乐十几个G都在原来台式机硬盘上，考虑到MBA硬盘128很吃紧就不折腾了，直接听在线的吧，其他挑精选的手机听了。
+
+### RAR格式压缩包 ###
+
+[mac下解压缩rar文件工具-rarosx(免费的)使用介绍](http://jinchishuxue.iteye.com/blog/684495)
+
+> 下载地址：<http://www.rarlab.com/download.htm>
+> 
+> 	$ cd path/to/rar
+> 	$ sudo install -c -o $USER unrar /bin
+
+反正我在*nix下不打算用rar打包了，能解压就行。
+
 ### 网银 & 支付宝 ###
 
 直接上招行官网，点右侧的个人网上银行大众版，进去有MAC插件下载了！
@@ -151,6 +164,10 @@ Apache的配置过程中，使用以下命令来启动和查看启动错误：
 > 6. 在跳出來的畫面中，進入 在進入
 > 7. 在裡面找一個檔案`update.plist`刪掉它
 > 8. 回桌面點擊複製到桌面的updateinstaller檔案就可以安裝了
+
+#### Photoshop ####
+
+官方有Mac版，要破解请自行Google。
 
 ## 吐槽 ##
 

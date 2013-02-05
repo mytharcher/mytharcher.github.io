@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android折腾的痛苦
+title: 折腾Android刷机的痛苦
 category: knowledge
 ---
 

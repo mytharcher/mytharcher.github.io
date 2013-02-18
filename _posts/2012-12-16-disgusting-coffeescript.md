@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 恶心的CoffeeScript
-category: thinking
+category: criticism
 tags: [CoffeeScript, JavaScript]
 ---
 

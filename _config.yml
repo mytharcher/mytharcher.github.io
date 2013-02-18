@@ -15,6 +15,7 @@ custom:
         problems: 问题记录
         knowledge: 知识经验
         discovery: 日新月异
+        criticism: 非专业吐槽
     categories:
       - name:  thinking
         title: 闭门思考
@@ -27,6 +28,9 @@ custom:
 
       - name:  discovery
         title: 日新月异
+
+      - name:  criticism
+        title: 非专业吐槽
 
 meta:
     author:

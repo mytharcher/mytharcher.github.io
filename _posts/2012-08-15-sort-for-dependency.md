@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 有依赖关系的数组排序
-category: problems
+category: experience
 tags: [依赖, 数组, 排序, 算法]
 ---
 

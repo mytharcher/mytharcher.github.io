@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 解决jslib-builder中波浪号文件名排序问题
-category: problems
+category: experience
 tags: [波浪号, 排序, PHP]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: window.open返回值为null
-category: problems
+category: experience
 tags:
 - window.open
 - null

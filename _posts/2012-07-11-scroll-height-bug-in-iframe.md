@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Iframe高度自适应的缺陷
-category: problems
+category: experience
 tags: [自适应, 高度, iframe, height, scrollHeight]
 ---
 

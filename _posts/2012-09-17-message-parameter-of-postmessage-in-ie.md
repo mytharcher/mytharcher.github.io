@@ -2,7 +2,7 @@
 layout: post
 date: 2012-09-17 17:13:57
 title: IE8下window.postMessage的参数类型差异
-category: problems
+category: experience
 tags:
 - IE8
 - postMessage

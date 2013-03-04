@@ -2,7 +2,7 @@
 date: 2012-09-17 15:21:43
 layout: post
 title: Chrome下对空src的iframe刷新问题
-category: problems
+category: experience
 tags:
 - Chrome
 - iframe

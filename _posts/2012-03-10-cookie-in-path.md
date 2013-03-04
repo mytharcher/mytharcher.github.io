@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cookie获取深层路径值错误
-category: problems
+category: experience
 tags: [cookie, 路径]
 ---
 

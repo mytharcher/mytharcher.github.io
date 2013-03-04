@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 并行加载多个Ajax请求问题
-category: problems
+category: experience
 tags: [Ajax, 并行]
 ---
 

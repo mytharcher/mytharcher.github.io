@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FF和Chrome等现代浏览器支持字符串变量的中括号取值计算
-category: problems
+category: experience
 tags:
 - 中括号
 - 字符串

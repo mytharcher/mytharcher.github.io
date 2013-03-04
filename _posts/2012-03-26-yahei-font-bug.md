@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 雅黑字体文字显示异常问题
-category: problems
+category: experience
 tags: [雅黑, 微软雅黑, 字体, Chrome, Firefox]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 里程碑项目与iframe有关问题的排查
-category: problems
+category: experience
 ---
 
 这次改版升级中各种与iframe有关的诡异问题，集中在上线前测试中大爆发，各种坑都趟了一遍，雷区大冒险正式开始！

@@ -2,6 +2,7 @@
 layout: post
 title: Picasa翻墙之路
 category: criticism
+tags: [Google, Picasa, GFW, 翻墙]
 ---
 
 Google的大部分服务长期处于被墙状态，其中优秀的相册管理云服务Picasa也不例外。很早之前还用WordPress的时候还好有人开发了服务端代理插件，但后来转向Jekyll后，这个办法就行不通了。虽然我自己可以翻墙使用，但是分享给朋友们的时候极其不方便，要到处都传照片这种重复自己的事情作为一个有DRY洁癖的程序员是绝对不能忍的。于是趁假期的时间开始摸索Picasa的漫漫翻墙路。

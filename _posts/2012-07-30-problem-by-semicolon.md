@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一个分号引发的血案
-category: problems
+category: experience
 tags: [JavaScript, 分号]
 ---
 

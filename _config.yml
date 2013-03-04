@@ -12,19 +12,15 @@ desc: 造轮子工程师的代码笔记
 custom:
     category:
         thinking: 闭门思考
-        problems: 问题记录
-        knowledge: 知识经验
+        experience: 问题即经验
         discovery: 日新月异
         criticism: 非专业吐槽
     categories:
       - name:  thinking
         title: 闭门思考
 
-      - name:  problems
-        title: 问题记录
-
-      - name:  knowledge
-        title: 知识经验
+      - name:  experience
+        title: 问题即经验
 
       - name:  discovery
         title: 日新月异

@@ -2,7 +2,7 @@
 date: 2012-09-17 20:46:31
 layout: post
 title: IE8（包括以下）for..in无法遍历出对象上自定义的toString属性
-category: problems
+category: experience
 tags:
 - IE
 - for-in

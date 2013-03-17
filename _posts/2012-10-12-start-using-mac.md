@@ -169,6 +169,10 @@ Apache的配置过程中，使用以下命令来启动和查看启动错误：
 
 官方有Mac版，要破解请自行Google。
 
+#### Windows远程桌面 ####
+
+微软官方用于在Mac下连接Windows远程桌面的工具：[远程桌面客户端](http://www.microsoft.com/zh-cn/download/details.aspx?id=18140)
+
 ## 吐槽 ##
 
 0.	CMD菊花键和Ctrl被换位置极其不习惯啊！万一哪天又要回Windows星或者去Linux星看看就很别扭了啊！

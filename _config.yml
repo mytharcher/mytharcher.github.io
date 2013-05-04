@@ -6,7 +6,7 @@ exclude:
   - README.md
 
 name: 闭门造轮子
-host: mytharcher.github.com
+host: mytharcher.github.io
 desc: 造轮子工程师的代码笔记
 
 custom:
@@ -31,7 +31,7 @@ custom:
 meta:
     author:
         name: mytharcher
-        email: mytharcher@example.com
+        email: mytharcher@gmail.com
         disqus: tech-justlog-me                     # Disqus缩略标识
         gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
         github: mytharcher                          # GitHub账号

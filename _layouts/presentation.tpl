@@ -10,9 +10,7 @@
 
 <link rel="stylesheet" href="/lib/reveal.js/css/reveal.css">
 <link rel="stylesheet" href="/lib/reveal.js/css/theme/default.css" id="theme">
-
-<!-- For syntax highlighting -->
-<link rel="stylesheet" href="lib/css/zenburn.css">
+<link rel="stylesheet" href="/assets/css/reveal.css">
 
 <style>
 .sec-new-things li{
@@ -63,7 +61,7 @@ Reveal.initialize({
 	// Optional libraries used to extend on reveal.js
 	dependencies: [
 		{ src: '/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-		{ src: '/lib/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: '/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 		{ src: '/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 		{ src: '/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 		{ src: '/lib/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },

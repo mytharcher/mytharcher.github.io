@@ -28,6 +28,8 @@ custom:
       - name:  criticism
         title: 非专业吐槽
 
+    scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
+
 meta:
     author:
         name: mytharcher

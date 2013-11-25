@@ -2,7 +2,7 @@
 date: 2007-12-03 18:08:19
 layout: post
 title: How Many HTML Elements Can You Name in 5 Minutes?
-category: knowledge
+category: discovery
 tags:
 - html
 - 元素

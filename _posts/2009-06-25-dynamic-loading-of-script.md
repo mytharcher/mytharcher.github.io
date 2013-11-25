@@ -2,7 +2,7 @@
 date: 2009-06-25
 layout: post
 title: 动态加载脚本方案调研
-category: knowledge
+category: thinking
 tags:
 - 动态
 - 加载

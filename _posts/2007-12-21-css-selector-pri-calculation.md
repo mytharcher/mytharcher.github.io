@@ -2,7 +2,7 @@
 date: 2007-12-21 01:05:36
 layout: post
 title: CSS选择器优先级的数位计算法
-category: knowledge
+category: experience
 tags:
 - css
 - 优先级

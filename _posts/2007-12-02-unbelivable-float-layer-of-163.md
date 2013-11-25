@@ -2,7 +2,7 @@
 date: 2007-12-02 23:19:10
 layout: post
 title: 网易无敌的浮动层解决方案揭密
-category: knowledge
+category: experience
 tags:
 - css
 - 无js

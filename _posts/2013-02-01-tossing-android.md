@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 折腾Android刷机的痛苦
-category: knowledge
+category: experience
 ---
 
 由于我的HTC Desire买的比较早，硬件配置都不如现在的新机。CPU还好，内部存储就悲剧了，160M左右的剩余空间，在如今各种APP大户的侵占下，装上十几个应用就随时报空间不足。于是我在对每次想装一个新应用就必须挑一个卸载掉忍受了很长时间之后，终于决定刷机来解决这个问题。

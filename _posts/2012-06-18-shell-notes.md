@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shell脚本笔记
-category: knowledge
+category: experience
 tags: Shell
 ---
 

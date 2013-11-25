@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 记下最近碰到的几个数组问题
-category: knowledge
+category: experience
 tags: [JavaScript, Array, 数组]
 ---
 

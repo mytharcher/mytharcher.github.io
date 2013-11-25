@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DOM元素所有样式属性表
-category: knowledge
+category: experience
 tags: [CSS, Firefox, 样式]
 ---
 

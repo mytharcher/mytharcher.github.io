@@ -2,7 +2,7 @@
 date: 2008-01-18 23:55:51
 layout: post
 title: 推荐近期的几篇css的文章
-category: knowledge
+category: discovery
 tags:
 - absolute
 - css

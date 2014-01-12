@@ -173,6 +173,14 @@ Apache的配置过程中，使用以下命令来启动和查看启动错误：
 
 微软官方用于在Mac下连接Windows远程桌面的工具：[远程桌面客户端](http://www.microsoft.com/zh-cn/download/details.aspx?id=18140)
 
+### 其他工具软件包 ###
+
+#### ImageMagick ####
+
+用于在命令行处理图片，比如批量调整大小等需求（[官方下载页面](http://www.imagemagick.org/script/binary-releases.php)）。
+
+	$ brew install imagemagick
+
 ## 吐槽 ##
 
 0.	CMD菊花键和Ctrl被换位置极其不习惯啊！万一哪天又要回Windows星或者去Linux星看看就很别扭了啊！

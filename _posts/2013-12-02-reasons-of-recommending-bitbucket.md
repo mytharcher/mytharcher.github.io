@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 推荐Bitbucket的理由
-category: discovery
+category: thining
 tags: [Bitbucket, 项目管理, git]
 ---
 

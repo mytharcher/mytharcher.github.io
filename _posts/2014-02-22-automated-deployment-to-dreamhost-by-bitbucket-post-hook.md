@@ -34,7 +34,7 @@ Bitbucket的官方hook说明中提到可以使用带有Basic认证模式的URL�
 	$ git init
 	$ git remote add origin ssh://git@bitbucket.org/username/repo.git
 
-复制Dreamhost上当前用户`id_rsa.pub`的内容（没有的话创建一个），并到Bitbucket上以此创建一个deploy key（在项目设置中）。这一步我不确定是否必要，但按照Bitbucket的说明是要的。
+复制Dreamhost上当前用户`id_rsa.pub`的内容（没有的话创建一个），并到Bitbucket上以此创建一个deploy key（在项目设置中）。这一步我<del>不</del>确定是<del>否</del>必要的（但按照Bitbucket的说明是要的），但要注意，DH上的rsa只能设置**空密码**，否则部署不能成功。
 
 接下来准备项目的分支，一般直接使用`master`分支，我这个项目用Dreamhost主要做测试用，所以使用了`dev`分支。所以在使用非`master`分支时需要手动创建好并切换到这个分支，方便起见，切换后可以删除`master`分支。
 

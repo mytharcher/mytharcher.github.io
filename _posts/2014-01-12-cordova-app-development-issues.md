@@ -72,13 +72,17 @@ tags:     [cordova, phonegap, icon, 图标]
 
 ### iOS ###
 
-iOS的开发好像只能在Mac下，使用XCode。首先也是先编译构建：
+iOS的开发好像只能在Mac下，使用Xcode。首先也是先编译构建：
 
     $ cordova build ios
 
 之后在`platforms/ios`目录中会有一个`AppClass.xcodeproj`文件，文件名是之前创建时的应用名（也可以在`config.xml`中修改成发布使用的名称）。双击这个文件在XCode中打开项目，左上角运行栏里选择一个虚拟设备，比如iPhone的iOS 6.1（需要下载500+M），CMD+R就在iOS中运行了。
 
 要想在真机里调试的话Apple会要求你注册成为AppStore的开发者，要交$99一年的“保护费”才可以。由于我觉得我的应用还暂时没达到能赚钱的地步，所以暂时虚拟测试，等以后做的足够好再去市场发布吧。
+
+不过根据[用 Xcode 在 iOS 越狱设备上开发调试](http://zhuoqiang.me/jailbroken-ios-device-debug-using-xcode.html)这篇文章，也可以在已越狱的设备上安装发布。
+
+我使用的Mac系统版本是10.9，Xcode版本是5.0，这其中有一些路径会不一样，但基本在Xcode.app的目录中相应能够找到。
 
 ## 问题集 ##
 

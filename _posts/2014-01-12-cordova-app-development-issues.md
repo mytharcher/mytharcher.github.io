@@ -56,7 +56,12 @@ tags:     [cordova, phonegap, icon, 图标]
 
 如果要发布APK文件，那么可以在Eclipse界面里操作导出为APK，跟着提示继续就可以了。其中一步要创建一个签名秘钥，要输两个密码，最好找地方记住，然后秘钥文件也要保存好。
 
-在命令行发布的话要安装Ant，并且使用之前创建的秘钥，进入到项目的`platforms/android`目录，运行：
+在命令行发布的话要安装Ant，并且使用之前创建的秘钥。进入到项目的`platforms/android`目录（秘钥文件最好就放置在此目录），创建一个`ant.properties`文件，以指明使用的keystore：
+
+    key.store=your.keystore
+    key.alias=youralias
+
+运行：
 
     $ ant release
 

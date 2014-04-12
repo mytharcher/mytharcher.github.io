@@ -1,6 +1,6 @@
 *{box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
 html,body,h1,h2,h3,h4,h5,h6,ul,ol,li,p,form,dl,dt,dd,figure{margin:0; padding:0; border:0;}
-body{line-height:1.6em; font-family:Helvetica, Arial, sans-serif; color:#555;}
+body{line-height:1.6em; font-family:Helvetica, Arial, sans-serif; color:#555; background: url(http://mbed.qiniudn.com/yanjunyi.com/img/bg-light.jpg) fixed;}
 a{margin:0 2px; color:#06c; text-decoration:none;}
 a:hover{text-decoration:underline;}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{margin:0;}
@@ -34,19 +34,21 @@ input,textarea{resize:none;}
 	}
 }
 
+.main{background-color: #fff;}
+
 header{font-size:80%;}
 header h1 .minor{color:#999; font-weight:normal;}
 header .additional{font-size:90%; color:#ccc;}
 
-aside{background:#eee; font-size:75%;}
+aside{background:rgba(238,238,238,.4); font-size:75%;}
 aside h2{margin:1em 0;}
-aside .feed-link{margin-left:0.5em; color: #d81;}
+aside .feed-link{margin-left:0.5em; color: #e81;}
 aside nav ul{list-style:none; line-height:1.5em;}
 aside nav li:before{content:"> "; font:normal 80%/1em "宋体"; margin:0 .3em; color: #999;}
 aside .block{max-width:300px; margin:1.5em 0; line-height:1.5em;}
 aside .block h3{margin:.5em 0;}
 aside .block a{margin:0;}
-aside .block-about p{margin:0.5em 0; color:#999;}
+aside .block-about p{margin:0.5em 0; color:#888;}
 aside .block-about figure img{border-radius:2px;}
 aside .block-about figcaption{margin:0.2em 0;}
 aside .block-about figcaption:after{content:'<mytharcher@gmail.com>'; padding-left:.5em; color: #bbb; font-weight:bold; opacity: 0; transition:opacity .5s; -moz-transition:opacity .5s; -webkit-transition:opacity .5s;}

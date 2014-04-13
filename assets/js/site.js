@@ -54,7 +54,7 @@ var site = {
 				blog: 'Blog',
 				'google-plus': '+me',
 
-				'work-for-free': 'Work for Free',
+				'work-for-free': 'Work for Freedom',
 				'programming-skills': 'Programming Skills',
 				'using-tools': 'Using Tools',
 				'contact-me': 'Contact Me',

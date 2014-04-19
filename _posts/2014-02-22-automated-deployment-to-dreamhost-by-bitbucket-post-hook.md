@@ -48,4 +48,16 @@ Bitbucket的官方hook说明中提到可以使用带有Basic认证模式的URL�
 
 <script src="https://gist.github.com/mytharcher/9138422.js"></script>
 
+## Update ##
+
+在Linux主机上遇到的问题这篇文章比较有帮助：
+
+[Git pull from a php script, not so simple.](http://jondavidjohn.com/git-pull-from-a-php-script-not-so-simple/)
+
+另外注意几点：
+
+0. 使用PHP函数`exec('whoami')`方法调用命令行时，命令行的用户是当前执行PHP的用户。
+0. `exec('xxx 2>&1')`可以捕获命令行的错误输出。
+0. ssh-key出现的各种验证错误问题，都需要检查是否是当前用户，`~/.ssh`目录权限，`~/.ssh/known_hosts`文件是否已添加等情况。
+
 -EOF-

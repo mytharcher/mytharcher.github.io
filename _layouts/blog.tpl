@@ -73,7 +73,7 @@
 	</div>
 </aside>
 
-<script src="http://cdn.elfjs.com/code/elf-0.5.0.min.js"></script>
+<script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 <script src="/assets/js/site.js"></script>
 {% for script in page.scripts %}<script src="{{ script }}"></script>
@@ -87,9 +87,6 @@ site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '{{ site.meta.author.gcse }}';
 site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.custom.scrollingLoadCount }};
 </script>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa37d06f71b8f8aec3a1d627f5a8d7a72' type='text/javascript'%3E%3C/script%3E"));
-</script>
+{% include baidu-stats.tpl %}
 </body>
 </html>

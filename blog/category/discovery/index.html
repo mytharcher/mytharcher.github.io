@@ -1,13 +1,9 @@
 ---
-layout: nil
+layout: list
+title:  日新月异
 ---
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="refresh" content="0;url=http://yanjunyi.com/blog/discovery/" />
-<link rel="canonical" href="http://yanjunyi.com/blog/discovery/" />
-</head>
-<body>
-This page has moved to <a href="http://yanjunyi.com/blog/discovery/">http://yanjunyi.com/blog/discovery/</a>
-</body>
-</html>
+
+<!-- 日新月异分类 -->
+{% assign list = site.categories.discovery %}
+{% assign preview = true %}
+{% include list.tpl %}

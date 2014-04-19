@@ -1,13 +1,9 @@
 ---
-layout: nil
+layout: list
+title:  吐槽
 ---
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="refresh" content="0;url=http://yanjunyi.com/blog/criticism/" />
-<link rel="canonical" href="http://yanjunyi.com/blog/criticism/" />
-</head>
-<body>
-This page has moved to <a href="http://yanjunyi.com/blog/criticism/">http://yanjunyi.com/blog/criticism/</a>
-</body>
-</html>
+
+<!-- 吐槽分类 -->
+{% assign list = site.categories.criticism %}
+{% assign preview = true %}
+{% include list.tpl %}

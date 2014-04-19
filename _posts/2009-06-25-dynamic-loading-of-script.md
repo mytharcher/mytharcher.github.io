@@ -25,7 +25,7 @@ tags:
 
 按照程序的流程，应该分为3个步骤：加载，执行，执行完毕通知。
 
-![加载步骤](/assets/img/load-script/load-step.jpg)
+![加载步骤](http://mbed.qiniudn.com/yanjunyi.com/img/load-script/load-step.jpg)
 
 ## 解决方案
 
@@ -49,7 +49,7 @@ tags:
 	* FF/Safari下，`<script>`标签有`onload`事件，脚本的执行在`onload`事件之前执行，所以可以用`onload`对执行状态进行判断。
 	* Opera下，`onstatuschange`和`onload`在加载脚本执行完毕后都会执行，顺序是：js执行 → `readyState = ’loaded’` → `onload` → `readyState = ‘loaded’`。 
 
-![Script标签加载脚本时各个环节的顺序](/assets/img/load-script/browsers-diff.jpg)
+![Script标签加载脚本时各个环节的顺序](http://mbed.qiniudn.com/yanjunyi.com/img/load-script/browsers-diff.jpg)
 
 ### 方案二：加载部分使用Ajax，执行部分使用`eval`或创建`<script>`设置文本
 
@@ -57,7 +57,7 @@ tags:
 
 #### 程序流程
 
-![加载程序流程图](/assets/img/load-script/implement-flow.jpg)
+![加载程序流程图](http://mbed.qiniudn.com/yanjunyi.com/img/load-script/implement-flow.jpg)
 
 加载js的文本后，可以选择`eval`方式或者script标签文本方式执行。
 

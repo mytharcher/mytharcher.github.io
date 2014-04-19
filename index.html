@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <title>严俊羿</title>
-<meta name="google-site-verification" content="ql724blomqeajIk4dfxlfVVeqUTooDQmRuNFpBKREVQ" />
 <meta name="author" content="{{ site.meta.author.name }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
@@ -74,6 +73,22 @@ li#link-wechat span{top: 0;}
 li#link-more{margin-right: 0;}
 li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 #card ul:after{content: ""; clear: both; display: block;}
+
+@media screen and (max-width: 800px) {
+	#card{width: 410px; margin: auto;}
+	li#link-blog{margin-right: 0;}
+	li#link-wechat{margin-right: 10px;}
+	li#link-github{margin-right: 0;}
+}
+@media screen and (max-width: 480px) {
+	body{display: block; padding: 20px 0;}
+}
+@media screen and (max-width: 320px) {
+	body{padding: 10px}
+	#card li{width: 140px; height: 140px;}
+	#card li.half{height: 65px; line-height: 65px;}
+	#card li.quarter{width: 65px; height: 65px; line-height: 65px;}
+}
 </style>
 </head>
 

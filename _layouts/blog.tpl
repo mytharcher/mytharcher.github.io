@@ -71,6 +71,15 @@
 			<a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a>
 		</p>
 	</div>
+
+	<div class="block block-ad">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 博客页-固定 -->
+<ins class="adsbygoogle" style="display:inline-block;width:234px;height:60px" data-ad-client="ca-pub-7231324007393765" data-ad-slot="5765605934"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
 </aside>
 
 <script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>

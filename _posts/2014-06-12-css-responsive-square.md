@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS百分比自适应正方形
-category: problem
+category: experience
 tags: [CSS, 百分比, 自适应, 正方形]
 
 ---

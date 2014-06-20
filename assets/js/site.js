@@ -147,6 +147,7 @@ var site = {
 				var metaNode = elf(item);
 				metaNode.scrollFollow({
 					side: 'left',
+					minWidth: 640,
 					sideOffset: -150,
 					marginTop: 10,
 					referId: elf().mark(item.parentNode),
@@ -233,9 +234,11 @@ site.ScrollFollow = elf().Class({
 		elf().copy(args, this);
 		this.marginTop = this.marginTop || 0;
 		var boundle = this._handler.bind(this);
-		elf(window).on('scroll', boundle);
-		elf(window).on('resize', boundle);
-		boundle();
+		if (document.body.offsetWidth > this.minWidth) {
+			elf(window).on('scroll', boundle);
+			elf(window).on('resize', boundle);
+			boundle();
+		}
 	},
 	
 	getDocumentElement: function () {
@@ -258,6 +261,12 @@ site.ScrollFollow = elf().Class({
 
 	getStartLeft: function () {
 		return this.node.getPosition(this.getDocumentElement()).x;
+	},
+	
+	getOriginLeft: function () {
+		return typeof this.originLeft != 'undefined' ? this.originLeft
+			: (this.originLeft = this.node.getPosition(this.getDocumentElement()).x
+			- elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).x);
 	},
 	
 	getFollowingBottom: function () {
@@ -303,10 +312,11 @@ site.ScrollFollow = elf().Class({
 			this.startLeft :
 			(this.startLeft = this.getStartLeft());
 		var originTop = this.getOriginTop();
+		var originLeft = this.getOriginLeft();
 		var followingBottom = this.followingBottom = this.getFollowingAbsBottom();
 		var followingWidth = this.followingWidth || (this.followingWidth = this.getFollowingWidth());
-		var followingHeight = this.followingHeight || (this.followingHeight = this.getFollowingHeight());
-		var followingMargin = this.followingMargin || (this.followingMargin = this.getFollowingMargin());
+		var followingHeight = this.getFollowingHeight();
+		var followingMargin = this.getFollowingMargin();
 		var docElem = this.getDocumentElement();
 		var pageWidth = docElem.offsetWidth;
 		var contentWidth = this.contentWidth || (this.contentWidth = this.getContentWidth());
@@ -327,10 +337,12 @@ site.ScrollFollow = elf().Class({
 				// }
 				// props[this.side] = sideOffset + 'px';
 			}
-		} else {
+		} else if (pageWidth > this.minWidth) {
 			props.position = 'absolute';
 			props.top = originTop + 'px';
 			props[this.side] = this.sideOffset + 'px';
+		} else {
+			props[this.side] = originLeft;
 		}
 		props && this.node.css(props);
 	}

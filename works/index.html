@@ -20,50 +20,6 @@ h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{margin:0;}
 img{border:0; vertical-align: middle;}
 input,textarea{resize:none;}
 
-@media screen and (min-width:1024px) {
-	.main{
-		position:relative; zoom:1;
-		min-height: 100%;
-		margin-left: 400px;
-		padding:50px;
-	}
-	aside{
-		position:fixed;
-		width: 400px;
-		left:0;
-		top:0;
-		height:100%;
-		overflow:hidden;
-		padding:30px 50px;
-		text-align: right;
-		box-shadow:-5px 0 5px rgba(0,0,0,.1) inset;
-	}
-
-	aside .block{
-		float: right;
-		width: 100%;
-		max-width: 300px;
-	}
-	aside .block:after{
-		display: block;
-		content: "";
-		clear: both;
-		height: 0;
-		overflow: hidden;
-		visibility: hidden;
-	}
-}
-
-@media screen and (max-width: 1023px) {
-	.main{
-		padding: 1em;
-	}
-	aside{
-		position: relative;
-		padding: 1em;
-	}
-}
-
 @font-face {
   font-family: 'fa-addition';
   src: url('http://mbed.qiniudn.com/font/fa-addition.eot?81684682');
@@ -166,7 +122,10 @@ i.arrow-left{
 	text-align: left;
 }
 
-.main{background:rgba(238,238,238,.4);}
+.main{
+	position:relative; zoom:1;
+	background:rgba(238,238,238,.4);
+}
 
 aside a{
 	color: rgba(255,255,255,.8);
@@ -212,7 +171,7 @@ aside .block a{margin:0;}
 	height: 55px;
 	line-height: 55px;
 	overflow-y: hidden;
-	margin: 0 0 5px 5px;
+	margin: 0 5px 5px 0;
 	background: #555;
 	text-align: center;
 	font-size: 1.5rem;
@@ -253,7 +212,7 @@ aside .block a{margin:0;}
 
 #contact{
 	clear: both;
-	width: 280px;
+	width: 300px;
 	margin: auto;
 	margin-top: 3em;
 }
@@ -270,6 +229,13 @@ aside .block a{margin:0;}
 	position: relative;
 	margin-left: 100px;
 	padding-left: 50px;
+}
+#timeline:before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: -4px;
+	height: 100%;
 	border-left: 4px solid #bbb;
 }
 #timeline p.line-end{
@@ -405,6 +371,95 @@ aside .block a{margin:0;}
 }
 #timeline li.item article p{
 	text-indent: 2em;
+}
+
+@media screen and (min-width:1024px) {
+	.main{
+		min-height: 100%;
+		margin-left: 400px;
+		padding:50px;
+	}
+	aside{
+		position:fixed;
+		width: 400px;
+		left:0;
+		top:0;
+		height:100%;
+		overflow:hidden;
+		padding:30px 50px;
+		text-align: right;
+		box-shadow:-5px 0 5px rgba(0,0,0,.1) inset;
+	}
+
+	aside .block{
+		float: right;
+		width: 100%;
+		max-width: 300px;
+	}
+	aside .block:after{
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.main{
+		padding: 1em;
+	}
+	aside{
+		position: relative;
+		padding: 1em;
+	}
+
+	#contact{
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	#timeline{
+		margin-left: 0;
+		padding-left: 0;
+	}
+	#timeline:before{
+		left: 50%;
+		margin-left: -2px;
+	}
+	#timeline p.line-end{
+		left: 50%;
+		margin-left: -40px;
+	}
+	#timeline li.item{
+		margin-top: 100px;
+	}
+	#timeline li.item .meta{
+		left: auto;
+		right: 50%;
+		top: -60px;
+		margin-right: -20px;
+	}
+	#timeline li.item .meta i.fa{
+		right: 0;
+	}
+	#timeline li.item p.date{
+		left: auto;
+		right: 50px;
+	}
+	#timeline li.item i.arrow-left{
+		display: none;
+		right: auto;
+		left: 12px;
+		top: 52px;
+
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
 }
 
 </style>

@@ -99,7 +99,7 @@ var site = {
 			}
 
 			function setLightColor() {
-				elf(document.body).css('background-color', 'rgba(85,85,85,' + getDayLight() + ')');
+				elf('#page').css('background-color', 'rgba(85,85,85,' + getDayLight() + ')');
 				textColorBase = 0x4d;
 				textColorDelta = 0x80;
 				textColor = Math.round(textColorBase + textColorDelta * getDayLight());

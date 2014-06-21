@@ -358,7 +358,7 @@ elf(function () {
 	if (elf.client.Device) {
 		elf(document.body).addClass('device-mobile');
 	}
-	site.Translation.translate(navigator.language);
+	site.Translation.translate(navigator.language || 'zh-CN');
 
 	elf('a.mail').attr('href', elf().template('mailto:#{0}@#{1}', 'mytharcher', 'gmail.com'));
 

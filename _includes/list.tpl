@@ -8,6 +8,8 @@
 	<div class="article-content">
 	{% if forloop.index == 1 and preview and post.layout == 'post' %}
 		{{ post.content }}
+	{% elsif forloop.index < 10 and post.excerpt %}
+		{{ post.excerpt }}
 	{% endif %}
 	</div>
 </article>

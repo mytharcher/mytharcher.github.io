@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CodeIgniter框架集成支付宝即时到账SDK
-category: [experience, criticism]
+category: experience
 tags: [CodeIgniter, 支付宝]
 
 ---

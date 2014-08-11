@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: "npm: Rainbow"
 category: works
 icon: code-fork

@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: elf+js
 category: works
 icon: code-fork

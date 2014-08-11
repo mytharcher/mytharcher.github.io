@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: 百度联盟系统4.0重构
 category: works
 icon: building-o

@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: Jekyll站点主题：SimpleGray
 category: works
 icon: code-fork

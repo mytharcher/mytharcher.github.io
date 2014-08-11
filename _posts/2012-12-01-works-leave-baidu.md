@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: 离开百度，开始自由职业
 category: works
 icon: building-o

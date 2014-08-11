@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: Ashish个人网站
 category: works
 icon: users

@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: "npm: MustLayout"
 category: works
 icon: code-fork

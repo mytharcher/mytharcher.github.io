@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: 找青旅App
 category: works
 icon: heart

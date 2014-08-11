@@ -1,5 +1,4 @@
 ---
-layout: nil
 title: 加入百度
 category: works
 icon: building-o

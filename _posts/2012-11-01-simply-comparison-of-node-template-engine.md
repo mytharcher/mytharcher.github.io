@@ -15,7 +15,7 @@ node.js里选择模板引擎时看了大部分引擎的语法，简单做个对�
 		title= pageTitle
 		script(type='text/javascript')
 			if (foo) {
-			 bar()
+				bar()
 			}
 		body
 		h1 Jade - node template engine
@@ -31,7 +31,7 @@ node.js里选择模板引擎时看了大部分引擎的语法，简单做个对�
 
 	<ul>
 	<% for(var i=0; i<supplies.length; i++) { %>
-		 <li><%= supplies[i] %></li>
+		<li><%= supplies[i] %></li>
 	<% } %>
 	</ul>
 

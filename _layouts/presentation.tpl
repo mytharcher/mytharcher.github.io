@@ -8,6 +8,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+
 <link rel="stylesheet" href="/lib/reveal.js/css/reveal.css">
 <link rel="stylesheet" href="/lib/reveal.js/css/theme/default.css" id="theme">
 <link rel="stylesheet" href="/assets/css/reveal.css">

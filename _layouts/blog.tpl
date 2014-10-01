@@ -6,6 +6,8 @@
 <meta name="keywords" content="{{ page.tags | join: ',' }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>{{ site.name }}{% if page.title %} / {{ page.title }}{% endif %}</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link href="http://{{ site.host }}/feed.xml" rel="alternate" title="{{ site.name }}" type="application/atom+xml" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />

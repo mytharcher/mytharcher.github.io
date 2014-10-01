@@ -1,5 +1,4 @@
 ---
-layout: nil
 ---
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -22,11 +21,11 @@ input,textarea{resize:none;}
 
 @font-face {
   font-family: 'fa-addition';
-  src: url('http://mbed.qiniudn.com/font/fa-addition.eot?81684682');
-  src: url('http://mbed.qiniudn.com/font/fa-addition.eot?81684682#iefix') format('embedded-opentype'),
-       url('http://mbed.qiniudn.com/font/fa-addition.woff?81684682') format('woff'),
-       url('http://mbed.qiniudn.com/font/fa-addition.ttf?81684682') format('truetype'),
-       url('http://mbed.qiniudn.com/font/fa-addition.svg?81684682#fa-addition') format('svg');
+  src: url('http://mbed.qiniudn.com/font/fa-addition.eot');
+  src: url('http://mbed.qiniudn.com/font/fa-addition.eot#iefix') format('embedded-opentype'),
+       url('http://mbed.qiniudn.com/font/fa-addition.woff') format('woff'),
+       url('http://mbed.qiniudn.com/font/fa-addition.ttf') format('truetype'),
+       url('http://mbed.qiniudn.com/font/fa-addition.svg#fa-addition') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -103,25 +102,6 @@ i.arrow-left{
 	transform: rotate(-45deg);
 }
 
-.progress{
-	height: 18px;
-	overflow: hidden;
-	/*padding: 1px;*/
-	border-radius: 4px;
-	background: #666;
-	box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
-}
-.progress .bar{
-	height: 100%;
-	padding: 0 10px;
-	border-radius: 3px;
-	background: #82C246;
-	box-shadow: inset 0 1px 1px rgba(255,255,255,.2);
-	font-size: 12px;
-	line-height: 18px;
-	text-align: left;
-}
-
 .main{
 	position:relative; zoom:1;
 	background:rgba(238,238,238,.4);
@@ -150,10 +130,35 @@ aside .block a{margin:0;}
 	width: 200px;
 }
 #skills li{
+	position: relative;
 	list-style: none;
-	width: 200px;
+	width: 100%;
 	margin: 1em 0;
+	height: 18px;
+	overflow: hidden;
+	/*padding: 1px;*/
+	border-radius: 4px;
+	background: #666;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
 }
+#skills li div{
+	height: 100%;
+	padding: 0 10px;
+	border-radius: 3px;
+	background: #82C246;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.2);
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+}
+#skills li p{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	padding: 0 10px;
+}
+
 
 #tools ul:after{
 	content: "";
@@ -167,38 +172,53 @@ aside .block a{margin:0;}
 	position: relative;
 	float: left;
 	list-style: none;
-	width: 55px;
-	height: 55px;
-	line-height: 55px;
+	width: 0;
+	height: 0;
+	padding: 9%;
+	/*line-height: 55px;*/
 	overflow-y: hidden;
-	margin: 0 5px 5px 0;
+	margin: 0 2.5% 2.5% 0;
 	background: #555;
 	text-align: center;
 	font-size: 1.5rem;
 }
+#tools li:nth-child(5n){
+	margin-right: 0;
+}
 #tools li i{
 	display: inline-block;
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1em;
+	height: 1em;
+	overflow: hidden;
+	margin: -.5em 0 0 -.5em;
+	line-height: 1em;
 
-	-webkit-transition: opacity ease .3s, font-size ease .3s, color ease .3s;
-	-moz-transition: opacity ease .3s, font-size ease .3s, color ease .3s;
-	-ms-transition: opacity ease .3s, font-size ease .3s, color ease .3s;
-	transition: opacity ease .3s, font-size ease .3s, color ease .3s;
+	-webkit-transition: all ease .3s;
+	-moz-transition: all ease .3s;
+	-ms-transition: all ease .3s;
+	transition: all ease .3s;
+}
+#tools li i[class^="icon-"]:before{
+	margin: 0;
+	font-size: 90%;
 }
 #tools li span{
+	display: block;
 	position: absolute;
-	top: 100%;
+	top: 150%;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	opacity: 0;
+	margin-top: -.75em;
 	font-size: 12px;
 
-	-webkit-transition: top ease .3s, opacity ease .3s;
-	-moz-transition: top ease .3s, opacity ease .3s;
-	-ms-transition: top ease .3s, opacity ease .3s;
-	transition: top ease .3s, opacity ease .3s;
+	-webkit-transition: all ease .3s;
+	-moz-transition: all ease .3s;
+	-ms-transition: all ease .3s;
+	transition: all ease .3s;
 }
 #tools li:hover i{
 	opacity: 0;
@@ -206,7 +226,7 @@ aside .block a{margin:0;}
 }
 #tools li:hover span{
 	display: block;
-	top: 0;
+	top: 50%;
 	opacity: 1;
 }
 
@@ -217,10 +237,10 @@ aside .block a{margin:0;}
 	margin-top: 3em;
 }
 #contact p{
-	color: #555;
+	/*color: #555;*/
 	text-align: left;
 }
-#contact a{color: #555;}
+/*#contact a{color: #555;}*/
 #contact .mail:after{
 	content: "mytharcher@gmail.com";
 }
@@ -406,13 +426,23 @@ aside .block a{margin:0;}
 	}
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 641px) and (max-width: 1023px) {
 	.main{
 		padding: 1em;
 	}
 	aside{
 		position: relative;
 		padding: 1em;
+	}
+	#skills,#tools{
+		float: left;
+	}
+	#skills{
+		width: 25%;
+		margin-right: 3%;
+	}
+	#tools{
+		width: 72%;
 	}
 
 	#contact{
@@ -421,6 +451,12 @@ aside .block a{margin:0;}
 }
 
 @media screen and (max-width: 640px) {
+	aside,.main{
+		padding: 20px 15px;
+	}
+	#skills{
+		width: 100%;
+	}
 	#timeline{
 		margin-left: 0;
 		padding-left: 0;
@@ -474,19 +510,24 @@ aside .block a{margin:0;}
 		<h3 data-translate="programming-skills">编程技能</h3>
 		<ul>
 			<li>
-				<div class="progress"><div class="bar" style="width:90%">JavaScript</div></div>
+				<div style="width:90%"></div>
+				<p>JavaScript</p>
 			</li>
 			<li>
-				<div class="progress"><div class="bar" style="width:85%">HTML5</div></div>
+				<div style="width:85%"></div>
+				<p>HTML5</p>
 			</li>
 			<li>
-				<div class="progress"><div class="bar" style="width:80%">CSS3</div></div>
+				<div style="width:80%"></div>
+				<p>CSS3</p>
 			</li>
 			<li>
-				<div class="progress"><div class="bar" style="width:65%">Node.js</div></div>
+				<div style="width:65%"></div>
+				<p>Node.js</p>
 			</li>
 			<li>
-				<div class="progress"><div class="bar" style="width:60%">PHP</div></div>
+				<div style="width:60%"></div>
+				<p>PHP</p>
 			</li>
 		</ul>
 	</div>
@@ -495,7 +536,7 @@ aside .block a{margin:0;}
 		<h3 data-translate="using-tools">使用工具</h3>
 		<ul>
 			<li><i class="fa fa-apple"></i><span>Mac</span></li>
-			<li><i>S</i><span>Sublime Text</span></li>
+			<li><i>S</i><span>Sublime</span></li>
 			<li><i class="fa fa-git"></i><span>Git</span></li>
 			<li><i class="icon-chrome"></i><span>Chrome</span></li>
 			<li><i class="icon-firefox"></i><span>Firefox</span></li>
@@ -508,7 +549,7 @@ aside .block a{margin:0;}
 	</div>
 	
 	<div id="contact" class="block">
-		<p><span data-translate="contact-me-description">个人长期承接各类Web开发，如果您能提供的时薪不低于$15，请联系我的邮箱：</span> <a href="mailto:" class="mail"></a></p>
+		<p><span data-translate="contact-me-description">个人长期承接各类Web开发，如果您能提供的时薪不低于$20，请联系我的邮箱：</span> <a href="mailto:" class="mail"></a></p>
 	</div>
 </aside>
 

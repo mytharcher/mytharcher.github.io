@@ -89,7 +89,7 @@ tags: [node.js, JavaScript, 模板引擎]
 
 在 liquid/Smarty/Swig/Etpl 等中，可以通过类似 *nix shell 的管道模式，对要输出的变量进行更多处理，比如日期格式化，编码转义等功能。
 
-	{{ aDate | date(‘Y-m-d') }}
+	{{ aDate | date('Y-m-d') }}
 
 ### Swig的块继承 ###
 

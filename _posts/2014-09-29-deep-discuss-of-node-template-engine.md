@@ -276,6 +276,8 @@ issue里甚至有人提到这种写法应该使用开闭标签，让`{>parent}�
 
 问题三：后端和前端在模板中使用的变量名或者层次往往不一致，如果仅作为片段问题到不大，但如果是整页渲染，可能需要额外的针对性处理。
 
+不过话说回来，前后端要想共用模板，除了使用 HTML5 的 History API 优化体验，其他很少有能使用到的场景。尤其是现在 mv* 的前端框架大行其道的情况下，要么就都用纯前端模板，要么就还是传统的后端渲染网页。所以很可能共用这条道路本来就是个美好的设想，而没有很强的需求，大多数情况下考虑各自端的分离使用就可以了。
+
 ## API设计 ##
 
 	var Mustplus = Class({
@@ -349,7 +351,9 @@ issue里甚至有人提到这种写法应该使用开闭标签，让`{>parent}�
 
 ## 最后 ##
 
-目前市面上最接近我想法的应该就是 [dust.js](http://linkedin.github.io/dustjs/) 了，难怪 LinkedIn 的工程团队[通过对比最后选择的也是 dust.js](http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more)。当然如我期待的话还有可以改进的地方，YY总是要有的，万一哪天顺手就实现了呢？
+其实总结完了以后我发现我偏好 mustache 并不是为他的轻逻辑，而是喜欢他对模板语言简洁的表达方式。再回头看我设计的这套语法，其实主要也是把传统模板语言中的`if/else/foreach`等替换成了符号表达，并做了一些简化。从此看来，其实建立一个万用的模板引擎也不是不可能，因为普遍需求的一些核心语法基本是相同的，只要在初始化的时候将引擎配置成你喜欢的符号和结构的正则表达式，就可以解释为一种新的模板语言。
+
+目前市面上最接近我想法的应该是 [dust.js](http://linkedin.github.io/dustjs/) ，也是我了解到的唯一一个基于语法分析（利用了[PEG.js](http://pegjs.majda.cz/)构建语法）的模板引擎（其他大多数都是基于字符串切分和普通正则分析），难怪 LinkedIn 的工程团队[通过对比最后选择的也是 dust.js](http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more)。当然如我期待的话还有可以改进的地方，YY总是要有的，万一哪天顺手就实现了呢？
 
 {% endraw %}
 

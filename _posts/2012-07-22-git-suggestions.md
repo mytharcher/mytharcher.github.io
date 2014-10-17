@@ -33,7 +33,7 @@ Git现在是越用越顺手了，甚至反过来svn都不会用了。但正因�
 		$ git add path/to/modified/files                      # 标记修改的文件
 		$ git commit -m "Adjust page style for xxx function." # 提交修改
 	
-0.	在本地测试完成后将当前临时分支合并到本地`dev`分支，并推送到仓库的`dev`分支进行测试环境测试：
+0.	在本地测试完成后将当前临时分支合并到本地`dev`分支，并推送到仓库的`dev`分支自动部署到环境测试进行测试：
 	
 		$ git checkout dev                 # 切换到dev分支
 		$ git pull origin dev              # 更新dev分支

@@ -161,4 +161,31 @@ tags: [云南, 昆明, 运营商劫持]
 
 除了将此文公布，实在找不到什么更好的方式以抵抗电信的运营商劫持。如有后续进展，会持续更新此文。
 
+2014-08-20 更新
+----------
+
+最近发现打开百度首页还会偶然的被强制挂上一个计费名：`tn=93046097_7_pg`，网址变成：`http://www.baidu.com/?tn=93046097_7_pg`。看来这想着办法黑钱已经可以用昆明话“钻头觅缝”来形容了。
+
+2014-11-09 更新
+----------
+
+10月以来，`103.242.xxx.xxx`这个广告投放系统又开始玩新花样，依旧是劫持外部 JS 请求替换的老办法，但投放的是 Hao123 的 iframe。而且最最 SB 的是投放代码写的有问题，一旦出广告，必然把页面撑爆错位。拜托代码能写的专业一点么！
+
+<figure>
+	<img src="http://mbed.qiniudn.com/yanjunyi.com/img/telecom-intercept/2014-11-08.jpg" />
+	<figcaption>被注入 Hao123 的 iframe。我手动在控制台取消了这个本该是 1x1 大小的容器定位方式，否则页面会向右无限延伸，撑爆屏幕</figcaption>
+</figure>
+
+同时从 11 月 8 日开始，连手机上都有区别对待的劫持了。托管用的[广告家](http://adpro.cn/)，感觉这家广告商基本做的都是黑产业，没怎么见正经网站分发他们的广告。
+
+<figure>
+	<img src="http://mbed.qiniudn.com/yanjunyi.com/img/telecom-intercept/2014-11-08-mobile-1.png" />
+	<figcaption>一早起来用手机测试正在开发的国外网站，下面赫然一大块广告</figcaption>
+</figure>
+
+<figure>
+	<img src="http://mbed.qiniudn.com/yanjunyi.com/img/telecom-intercept/2014-11-08-mobile-2.jpg" />
+	<figcaption>在浏览器中用手机模拟测试，也会出现这个广告</figcaption>
+</figure>
+
 -EOF-

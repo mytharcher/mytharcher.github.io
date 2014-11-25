@@ -188,4 +188,67 @@ tags: [云南, 昆明, 运营商劫持]
 	<figcaption>在浏览器中用手机模拟测试，也会出现这个广告</figcaption>
 </figure>
 
+2014-11-21 更新
+----------
+
+在国外网站[下载 Google Inbox APK](http://www.apkmirror.com/apk/google-inc/inbox/inbox-1-1-78614022-apk/) 的时候点击下载链接，首次下载的居然是一个 4M 大小的 APK，而不是 37M 的 Inbox APK。查看下载历史记录跳转到的地址是：
+
+	http://112.117.219.35/down.myapp.com/myapp/smart_ajax/com.tencent.android.qqdownloader/997107_19531343_1415980200145.apk?mkey=5474bdb574b4fb2b&f=d388&p=.apk
+
+还有一次跳转的是 360 的一个软件。总之我看到名字和大小不对立即停止了下载。理论上说国外网站即使做分润推介链接，也不应该做中国的软件，所以这应该也是运营商的劫持把戏。
+
+2014-11-23 更新
+----------
+
+上去哪网时发现先跳转到一个其他网站：
+
+	http://ceadx.agrantsem.com/clickentry?ccat=1130&csrc=106
+
+然后带上了一个渠道参数尾巴再跳转到去哪：
+
+	http://www.qunar.com/?ex_track=auto_53ce0f43
+
+这个域名的 whois 信息：
+
+```
+Domain Name:agrantsem.com
+Registry Domain ID:
+Registrar WHOIS Server: whois.hichina.com
+Registrar URL: http://www.net.cn/
+更新时间:2014-03-13T06:54:04Z
+Creation Date:2010-01-05T10:13:16Z
+Registrar Registration 过期时间:2017-01-05T10:13:16Z
+Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
+Registrar IANA ID: 420
+Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
+Registrar Abuse Contact Phone: +86.4006008500
+Reseller:
+Domain 状态：clientTransferProhibited
+Registry Registrant ID:HC-485644583-CN
+Registrant Name:Kan Shi 
+Registrant Organization:Kan Shi 
+Registrant Street:425 Grant Ave,,
+Registrant City:Palo Alto
+Registrant State/Province:
+Registrant Postal Code:94306
+Registrant Country:CN
+Registrant Phone:+1.6503530239
+Registrant Phone Ext:
+Registrant Fax:+1.6503530239
+Registrant Fax Ext:
+Registrant Email:ikanshi@gmail.com
+Name Server:ns1.dnsv3.com
+Name Server:ns2.dnsv3.com
+DNSSEC:unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database:2014-03-13T06:54:04Z<<<
+```
+
+使用了`Apache Tomcat/7.0.42`作为 Web 服务器。
+
+2014-11-25 更新
+----------
+
+在 V2EX 上还有其他人也发现了使用昆明电信时 APK 下载被劫持的情况：[下载 APK 文件经常被替换，怎样判断是不是被运营商劫持了？](https://v2ex.com/t/149254)
+
 -EOF-

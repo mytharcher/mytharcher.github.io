@@ -210,39 +210,37 @@ tags: [云南, 昆明, 运营商劫持]
 
 这个域名的 whois 信息：
 
-```
-Domain Name:agrantsem.com
-Registry Domain ID:
-Registrar WHOIS Server: whois.hichina.com
-Registrar URL: http://www.net.cn/
-更新时间:2014-03-13T06:54:04Z
-Creation Date:2010-01-05T10:13:16Z
-Registrar Registration 过期时间:2017-01-05T10:13:16Z
-Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
-Registrar IANA ID: 420
-Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
-Registrar Abuse Contact Phone: +86.4006008500
-Reseller:
-Domain 状态：clientTransferProhibited
-Registry Registrant ID:HC-485644583-CN
-Registrant Name:Kan Shi 
-Registrant Organization:Kan Shi 
-Registrant Street:425 Grant Ave,,
-Registrant City:Palo Alto
-Registrant State/Province:
-Registrant Postal Code:94306
-Registrant Country:CN
-Registrant Phone:+1.6503530239
-Registrant Phone Ext:
-Registrant Fax:+1.6503530239
-Registrant Fax Ext:
-Registrant Email:ikanshi@gmail.com
-Name Server:ns1.dnsv3.com
-Name Server:ns2.dnsv3.com
-DNSSEC:unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database:2014-03-13T06:54:04Z<<<
-```
+	Domain Name:agrantsem.com
+	Registry Domain ID:
+	Registrar WHOIS Server: whois.hichina.com
+	Registrar URL: http://www.net.cn/
+	更新时间:2014-03-13T06:54:04Z
+	Creation Date:2010-01-05T10:13:16Z
+	Registrar Registration 过期时间:2017-01-05T10:13:16Z
+	Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
+	Registrar IANA ID: 420
+	Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
+	Registrar Abuse Contact Phone: +86.4006008500
+	Reseller:
+	Domain 状态：clientTransferProhibited
+	Registry Registrant ID:HC-485644583-CN
+	Registrant Name:Kan Shi 
+	Registrant Organization:Kan Shi 
+	Registrant Street:425 Grant Ave,,
+	Registrant City:Palo Alto
+	Registrant State/Province:
+	Registrant Postal Code:94306
+	Registrant Country:CN
+	Registrant Phone:+1.6503530239
+	Registrant Phone Ext:
+	Registrant Fax:+1.6503530239
+	Registrant Fax Ext:
+	Registrant Email:ikanshi@gmail.com
+	Name Server:ns1.dnsv3.com
+	Name Server:ns2.dnsv3.com
+	DNSSEC:unsigned
+	URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+	>>> Last update of WHOIS database:2014-03-13T06:54:04Z<<<
 
 使用了`Apache Tomcat/7.0.42`作为 Web 服务器。
 

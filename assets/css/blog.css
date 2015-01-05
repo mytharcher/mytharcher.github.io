@@ -82,6 +82,8 @@ article h2{font-size:1.4em;}
 article figure{margin: 1em 0;}
 article p img,
 article figure img{max-width: 100%;}
+article figure.half img{max-width: 50%;}
+article figure.half img.margin{max-width: 46%; margin: 2%; box-shadow: 0 5px 15px rgba(0,0,0,.5);}
 article ul,
 article ol{padding-left:2em;}
 article dl{margin:.5em .8em;}

@@ -255,8 +255,8 @@ site.ScrollFollow = elf().Class({
 	
 	getOriginTop: function () {
 		return typeof this.originTop != 'undefined' ? this.originTop
-			: (this.originTop = this.node.getPosition(this.getDocumentElement()).y
-			- elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).y);
+			: (this.originTop = this.node.getPosition(this.getDocumentElement()).y -
+				elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).y);
 	},
 
 	getStartLeft: function () {
@@ -265,16 +265,16 @@ site.ScrollFollow = elf().Class({
 	
 	getOriginLeft: function () {
 		return typeof this.originLeft != 'undefined' ? this.originLeft
-			: (this.originLeft = this.node.getPosition(this.getDocumentElement()).x
-			- elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).x);
+			: (this.originLeft = this.node.getPosition(this.getDocumentElement()).x -
+				elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).x);
 	},
 	
 	getFollowingBottom: function () {
 		var content = elf().g(this.referId);
-		return (content.offsetHeight
-			+ elf().getPosition(elf().g(this.referId), this.getDocumentElement()).y
-			- elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).y
-			- this.getFollowingHeight());
+		return (content.offsetHeight +
+			elf().getPosition(elf().g(this.referId), this.getDocumentElement()).y -
+			elf().getPosition(elf().g(this.wrapId), this.getDocumentElement()).y -
+			this.getFollowingHeight());
 	},
 	
 	getFollowingAbsBottom: function () {

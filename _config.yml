@@ -6,8 +6,10 @@ exclude:
   - README.md
 
 host: yanjunyi.com
-name: 闭门造轮子
-desc: 造轮子工程师的代码笔记
+
+blog:
+    name: 闭门造轮子
+    desc: 造轮子工程师的代码笔记
 
 custom:
     category:

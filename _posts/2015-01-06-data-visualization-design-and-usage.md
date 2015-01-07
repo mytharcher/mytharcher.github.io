@@ -13,7 +13,7 @@ category: thinking
 
 <figure>
     <img src="http://mbed.qiniudn.com/yanjunyi.com/img/data-visualization-design-and-usage/umindex-android-version.jpg" />
-    <figcaption><strong>【错误的用法】</strong>不应该按照数量排序，而应该按照版本顺序排列</figcaption>
+    <figcaption><strong>【用法错误】</strong>不应该按照数量排序，而应该按照版本顺序排列</figcaption>
 </figure>
 
 饼状图
@@ -23,7 +23,7 @@ category: thinking
 
 <figure>
     <img src="http://mbed.qiniudn.com/yanjunyi.com/img/data-visualization-design-and-usage/umindex-social-sharing.jpg" />
-    <figcaption>【正确的用法】占比在饼图中的表达，其他的小份额扩展出来表示</figcaption>
+    <figcaption>【用法正确】占比在饼图中的表达，其他的小份额扩展出来表示</figcaption>
 </figure>
 
 折线图
@@ -40,7 +40,7 @@ category: thinking
 
 <figure>
     <img src="http://mbed.qiniudn.com/yanjunyi.com/img/data-visualization-design-and-usage/umindex-ios-version.jpg" />
-    <figcaption><strong>【正确的用法】</strong>同时以元素在时间上的先后顺序排列，更易表达和理解</figcaption>
+    <figcaption><strong>【用法正确】</strong>同时以元素在时间上的先后顺序排列，更易表达和理解</figcaption>
 </figure>
 
 3D 扩展

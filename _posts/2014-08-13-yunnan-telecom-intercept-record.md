@@ -252,8 +252,18 @@ tags: [云南, 昆明, 运营商劫持]
 2014-12-03 更新
 ----------
 
-发现这家公司和该劫持系统有关联：[中国电信 | 十环大数据](http://www.10000data.net/)
+发现这家公司和该劫持系统有关联：[中国电信 \| 十环大数据](http://www.10000data.net/)
 
 以及昆明代理商：[昆明斌创科技](http://www.bc10000.net/) [手机网站](http://980606.3g.gitom.com/)
+
+2015-01-05 更新
+----------
+
+<figure>
+	<img src="http://mbed.qiniudn.com/yanjunyi.com/img/telecom-intercept/telecom-intercept-2015-01-05.jpg" />
+	<figcaption>又在我开发测试页面的时候弹出右下角广告</figcaption>
+</figure>
+
+2015 年开始，劫持系统又更换了广告投放平台：[花生米](http://hsmkj.net/)
 
 -EOF-

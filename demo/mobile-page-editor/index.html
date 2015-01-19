@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>页面编辑器</title>
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+<style type="text/css">
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-text-size-adjust: none;
+}
+
+.ui-mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.6);
+}
+
+.ui-mask-white {
+	background: rgba(255,255,255,.6);
+}
+
+#container{
+	position: relative;
+}
+#container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#frame{
+	float: left;
+	width: 350px;
+	border: 1px solid #d7d7d7;
+}
+#preview{
+	width: 322px;
+	margin: auto;
+	border: 1px solid #d7d7d7;
+}
+.ui-blockpreviewer{
+	position: relative;
+	min-height: 30px;
+	background: #f7f7f7;
+}
+.ui-blockpreviewer>.control{
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	border: 2px dashed #f03300;
+}
+.ui-blockpreviewer:hover>.control,
+.ui-blockpreviewer.editing>.control{
+	display: block;
+}
+.ui-blockpreviewer>.control>.bottom{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+.ui-blockpreviewer>.control>.operation{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+}
+.ui-blockpreviewer.fixed button[rel=remove]{
+	display: none;
+}
+
+
+.ui-editorgroup{
+	position: relative;
+	margin-left: 370px;
+}
+
+.ui-blockeditor{
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #d7d7d7;
+	border-radius: 5px;
+	background: #f7f7f7;
+}
+.ui-blockeditor:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: -6px;
+	top: 15px;
+	border: 1px solid #d7d7d7;
+	border-width: 0 0 1px 1px;
+	background: #f7f7f7;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.ui-blockeditor.active{
+	display: block;
+}
+
+.ui-metapreviewer{
+	padding: 18px 60px 0 60px;
+	height: 64px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	background: url('http://kdt-static.qiniudn.com/v2/image/widget/showcase/titlebar.png') no-repeat;
+}
+.ui-metapreviewer h1{
+	margin: 0;
+	line-height: 46px;
+	font-size: 16px;
+}
+
+.ui-headingpreviewer .content{
+	padding: 5px;
+}
+
+.ui-richtextpreviewer article{
+	padding: 5px;
+}
+
+.ui-imagegroupeditor ul{
+	margin: 0;
+	padding: 0;
+}
+.ui-imagegroupeditor li{
+	list-style: none;
+	position: relative;
+	min-height: 120px;
+	margin-bottom: 10px;
+	padding: 10px;
+	padding-left: 120px;
+	border: 1px solid #d7d7d7;
+	background: #fff;
+}
+.ui-imagegroupeditor figure{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 50px;
+	background: #d7d7d7 center;
+	background-size: cover;
+}
+.ui-imagegroupeditor li button[rel=delete]{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	padding: 0;
+	border: none;
+	border-radius: 100%;
+	background: #000;
+	color: #fff;
+	font-size: 10px;
+}
+
+.ui-imagegrouppreviewer{
+	overflow-x: hidden;
+}
+.ui-imagegrouppreviewer ul{
+	margin: 0;
+	padding: 0;
+}
+.ui-imagegrouppreviewer li{
+	list-style: none;
+	width: 320px;
+}
+.ui-imagegrouppreviewer li a{
+	display: block;
+}
+.ui-imagegrouppreviewer figure img{
+	max-width: 100%;
+}
+.ui-imagegrouppreviewer ul.slider{
+	width: 10000px;
+}
+.ui-imagegrouppreviewer ul.slider li{
+	float: left;
+}
+.ui-imagegrouppreviewer ul.half li{
+	float: left;
+	width: 49%;
+}
+.ui-imagegrouppreviewer ul.half li:nth-child(odd){
+	margin-right: 2%;
+}
+.ui-imagegrouppreviewer ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.ui-dialog-head{
+	position: relative;
+	padding: 10px;
+	border-bottom: 1px solid #d7d7d7;
+}
+.ui-dialog-title{
+	text-align: center;
+	font-weight: bold;
+}
+.ui-dialog-head .skin-button-layerclose{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 5px;
+	top: 5px;
+	background: none;
+	border: none;
+}
+.ui-dialog-linkselector{
+	border: 1px solid #d7d7d7;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.ui-dialog-linkselector .ui-dialog-body:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.ui-dialog-linkselector .ui-tab{
+	float: left;
+	width: 200px;
+}
+.ui-dialog-linkselector .ui-tab li{
+	float: none;
+	margin-bottom: 0;
+}
+.ui-dialog-linkselector .ui-tab li a{
+	border: none;
+	border-radius: 0;
+}
+.ui-dialog-linkselector .ui-tab li.active a{
+	border: none;
+	background: #368ee0;
+	color: #fff;
+}
+.ui-dialog-linkselector li{
+	list-style: none;
+}
+
+
+
+.ui-linkgroupeditor ul{
+	margin: 0;
+	padding: 0;
+}
+.ui-linkgroupeditor li{
+	list-style: none;
+	position: relative;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #d7d7d7;
+	background: #fff;
+}
+.ui-linkgroupeditor li button[rel=delete]{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	padding: 0;
+	border: none;
+	border-radius: 100%;
+	background: #000;
+	color: #fff;
+	font-size: 10px;
+}
+
+.ui-linkgrouppreviewer{
+	overflow-x: hidden;
+}
+.ui-linkgrouppreviewer ul{
+	margin: 0;
+	padding: 0;
+}
+.ui-linkgrouppreviewer li{
+	list-style: none;
+}
+.ui-linkgrouppreviewer li a{
+	display: block;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+	<div id="frame">
+		<div id="preview" ui="type:MPEPreviewerGroup; id:PreviewerGroup"></div>
+		<div id="panel-new">
+			<h3>添加内容</h3>
+			<button type="button" class="btn btn-default" rel="MPEHeadingPreviewer">标题</button>
+			<button type="button" class="btn btn-default" rel="MPERichTextPreviewer">富文本</button>
+			<button type="button" class="btn btn-default" rel="MPEImageGroupPreviewer">组图</button>
+			<button type="button" class="btn btn-default" rel="MPELinkGroupPreviewer">文本导航</button>
+		</div>
+	</div>
+
+	<div id="editors" ui="type:MPEEditorGroup; id:EditorGroup">
+		<div ui="type:MPEBlockEditor; id:MPEMetaEditor; group:EditorGroup;">
+			<div class="form-group">
+				<label>页面标题</label>
+				<input type="text" name="title" ui="type:TextInput;" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>背景颜色</label>
+				<p class="input-group">
+					<input type="color" name="bgcolor" ui="type:TextInput;" />
+					<button type="button" class="btn btn-default">重置</button>
+				</p>
+			</div>
+		</div>
+
+		<div ui="type:MPEBlockEditor; id:MPERichTextEditor; group:EditorGroup;">
+			<div class="form-group">
+				<label>背景颜色</label>
+				<p class="input-group">
+					<input type="color" name="bgcolor" ui="type:TextInput;" />
+					<button type="button" class="btn btn-default">重置</button>
+				</p>
+			</div>
+			<div class="form-group">
+				<div ui="type:Editor;" name="content"></div>
+			</div>
+		</div>
+
+		<div ui="type:MPEBlockEditor; id:MPEHeadingEditor; group:EditorGroup;">
+			<div class="form-group">
+				<label>主标题</label>
+				<input type="text" name="title" ui="type:TextInput;" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>副标题</label>
+				<input type="text" name="subtitle" ui="type:TextInput;" class="form-control" />
+			</div>
+			<div class="form-group">
+				<input type="radio" name="alignment" value="left" ui="type:Radio; title:居左" />
+				<input type="radio" name="alignment" value="center" ui="type:Radio; title:居中;" />
+				<input type="radio" name="alignment" value="right" ui="type:Radio; title:居右;" />
+			</div>
+			<div class="form-group">
+				<label>背景颜色</label>
+				<p class="input-group">
+					<input type="color" name="bgcolor" ui="type:TextInput;" />
+					<button type="button" class="btn btn-default">重置</button>
+				</p>
+			</div>
+		</div>
+
+		<div ui="type:MPEImageGroupEditor; id:MPEImageGroupEditor; group:EditorGroup">
+			<div class="form-group">
+				<label>显示方式</label>
+				<input type="radio" name="style" value="slider" ui="type:Radio; title:轮播;" />
+				<input type="radio" name="style" value="full" ui="type:Radio; title:大图;" />
+				<input type="radio" name="style" value="half" ui="type:Radio; title:小图;" />
+			</div>
+			<ul></ul>
+			<p class="operation"><button type="button" rel="add" class="btn btn-default">添加</button></p>
+		</div>
+
+		<div ui="type:MPELinkGroupEditor; id:MPELinkGroupEditor; group:EditorGroup">
+			<ul></ul>
+			<p class="operation"><button type="button" rel="add" class="btn btn-default">添加</button></p>
+		</div>
+	</div>
+</div>
+
+<!-- <div ui="type:ImageSelector; id:ImageSelector"></div> -->
+<div id="LinkSelector" ui="type:MPELinkSelector; id:LinkSelector; draggable:1; mask:1; autoPosition:1; title:链接选择;"></div>
+<script id="ImageSelector" style="display:none;"></script>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="/lib/ueditor/ueditor.config.js"></script>
+<script src="/lib/ueditor/ueditor.all.min.js"></script>
+<script src="/lib/ueditor/ueditor.parse.min.js"></script>
+<script src="http://elfjs.qiniudn.com/code/elf-0.5.0.js"></script>
+<script src="http://elfjs.qiniudn.com/code/esui.min.js"></script>
+<script src="js/jquery.sortable.js"></script>
+<script src="js/esui.extend.js"></script>
+<script src="js/mpe.js"></script>
+<script type="text/javascript">
+window.UEDITOR_CONFIG.toolbars = [[
+	'fullscreen', 'source', '|', 'undo', 'redo', '|',
+	'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+	'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+	'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+	'directionalityltr', 'directionalityrtl', 'indent', '|',
+	'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+	'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+	/*'simpleupload',*/ 'insertimage', /*'gmap',*/ 'insertframe', /*'insertcode', 'webapp',*/ 'pagebreak', 'background', '|',
+	'horizontal', 'date', 'time', '|',
+	'print', 'preview', 'help', 'drafts'
+]];
+
+mpe.init();
+</script>
+</body>
+</html>

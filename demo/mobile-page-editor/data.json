@@ -1,0 +1,34 @@
+[
+	{
+		"type": "meta",
+		"title": "测试页面",
+		"bgcolor": "#ffffff"
+	},
+	{
+		"type": "title",
+		"title": "I am a Title",
+		"subtitle": "Some description",
+		"alignment": "center",
+		"bgcolor": "transparent"
+	},
+	{
+		"type": "images",
+		"style": "full",
+		"images": [
+			{
+				"image": "http://1.su.bdimg.com/skin/19.jpg",
+				"title": "On the Road",
+				"link": "http://www.baidu.com"
+			},
+			{
+				"image": "http://5.su.bdimg.com/skin/3.jpg",
+				"title": "Beautiful flowers",
+				"link": "http://www.baidu.com"
+			}
+		]
+	},
+	{
+		"type": "richtext",
+		"content": "<p>test</p>"
+	}
+]

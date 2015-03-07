@@ -1,5 +1,4 @@
 markdown: kramdown
-highlighter: null
 safe: false
 permalink: /blog/posts/:title.html
 exclude:

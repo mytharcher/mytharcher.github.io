@@ -9,7 +9,7 @@ category: thinking
 柱状图
 ----------
 
-柱状图最主要的作用是查看分布情况，比如小学时候的数学课就教过用绘图纸话班级期末考分数分布图。而在分布情况中，横坐标（即与“柱”垂直的坐标）是有很大意义的，代表一定的顺序，而如果用数量来排序，反而会增加理解难度。举个反面例子：
+柱状图最主要的作用是查看分布情况，比如小学时候的数学课就教过用绘图纸画班级期末考分数分布图。而在分布情况中，横坐标（即与“柱”垂直的坐标）是有很大意义的，代表一定的顺序，而如果用数量来排序，反而会增加理解难度。举个反面例子：
 
 <figure>
     <img src="http://mbed.qiniudn.com/yanjunyi.com/img/data-visualization-design-and-usage/umindex-android-version.jpg" />
@@ -36,7 +36,7 @@ category: thinking
 面积图
 ----------
 
-面积图是结合了折线图的趋势和饼图的占比合并出来的一种图表，主要表示集合中个元素数量占比的趋势变化。
+面积图是结合了折线图的趋势和饼图的占比合并出来的一种图表，主要表示集合中各元素数量占比的趋势变化。
 
 <figure>
     <img src="http://mbed.qiniudn.com/yanjunyi.com/img/data-visualization-design-and-usage/umindex-ios-version.jpg" />

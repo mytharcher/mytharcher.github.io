@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Word fly test</title>
+<style type="text/css">
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none;}
+
+html,body{height: 100%; margin: 0; padding: 0; border: 0;}
+ul,ol,figure,form,blockquote,dl,dt,dd{margin: 0; padding: 0;}
+img{border: 0; vertical-align: middle;}
+header{
+	padding: 20px;
+}
+#container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#container span{
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	padding: 5px;
+	background: #39c;
+	color: #fff;
+	font-size: 2em;
+}
+</style>
+</head>
+
+<body>
+<header>
+	<h1>Flying word test</h1>
+	<p>Swipe right to previous word, left to continue running.</p>
+</header>
+<div id="container"></div>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> -->
+<script type="text/javascript">
+function FlyWords(options) {
+	var me = this;
+
+	this.winWidth = $(window).width();
+	this.container = options.container;
+	this.words = options.words.map(function(word, index) {
+		var span = document.createElement('span');
+		span.innerHTML = word;
+		container.appendChild(span);
+		return {
+			element: span,
+			index: index,
+			x: this.winWidth
+		};
+	});
+
+	this.interval = 40;
+
+	this.current = 0;
+
+	this.flying = setInterval(this.fly.bind(this), this.interval);
+
+	// this.hammer = new Hammer(this.container, { drag_lock_to_axis: true }).on('release dragleft dragright swipeleft swiperight', this.hammerHanler.bind(this));
+
+	this.eventData = {};
+
+	$(this.container).on('touchstart', 'span', function (ev) {
+		var target = ev.target;
+		var touches = ev.originalEvent.touches;
+		if (target.nodeName == 'SPAN' && touches.length == 1) {
+			me.paused = true;
+			me.eventData.touchX = touches[0].clientX;
+			me.eventData.span = target;
+			me.eventData.innerOffsetX = target.offsetLeft - touches[0].clientX;
+
+			$(document).on('touchmove', function (ev) {
+				var touches = ev.originalEvent.touches;
+				if (touches.length == 1) {
+					me.eventData.touchSpeed = touches[0].clientX - me.eventData.touchX;
+					me.eventData.touchX = touches[0].clientX;
+					$(me.eventData.span).css('left', (touches[0].clientX + me.eventData.innerOffsetX) + 'px');
+				}
+			}).on('touchend', function (ev) {
+				var direction = me.eventData.touchSpeed >= 0 ? 1 : -1;
+				me.swipeOut = setInterval(function () {
+					var span = me.words[me.current].element;
+					if (Math.abs(me.eventData.touchSpeed) > 0) {
+						me.eventData.touchSpeed -= direction;
+						$(span).css('left', (span.offsetLeft + me.eventData.touchSpeed) + 'px');
+					} else {
+						// console.log(me.eventData.touchSpeed);
+						clearInterval(me.swipeOut);
+						if (direction < 0) {
+							if (span.offsetLeft <= span.offsetWidth) {
+								me.paused = false;
+							}
+						} else {
+							if (span.offsetLeft >= me.winWidth) {
+								me.prev();
+							}
+						}
+					}
+				}, me.interval);
+
+				$(document).off('touchmove').off('touchend');
+			});
+		}
+	});
+}
+
+FlyWords.prototype.prev = function () {
+	var me = this;
+
+	this.current--;
+	if (this.current < 0) {
+		this.current = this.words.length - 1;
+	}
+	var prev = this.words[this.current];
+	$(prev.element).css('left', -prev.element.offsetWidth + 'px');
+
+	this.prevBack = setInterval(function () {
+		var center = (me.winWidth - prev.element.offsetWidth) / 2;
+		// console.log(center);
+		if (prev.element.offsetLeft + 10 < center) {
+			$(prev.element).css('left', prev.element.offsetLeft + 10 + 'px');
+		} else {
+			$(prev.element).css('left', center + 'px');
+			clearInterval(me.prevBack);
+		}
+	}, this.interval);
+};
+
+FlyWords.prototype.fly = function () {
+	if (!this.paused) {
+		var word = this.words[this.current];
+		var span = $(word.element);
+		if (word.element.offsetLeft >= -span.width()) {
+			span.css('left', word.element.offsetLeft - 10 + 'px');
+		} else {
+			span.css('left', this.winWidth + 'px');
+			if (++this.current >= this.words.length) {
+				this.current = 0;
+			}
+		}
+	}
+};
+
+var flywords = new FlyWords({
+	container: document.getElementById('container'),
+	words: 'We are an experimental product company'.split(' ')
+});
+</script>
+</body>
+</html>

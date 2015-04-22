@@ -16,6 +16,7 @@ custom:
         experience: 问题即经验
         discovery: 日新月异
         criticism: 非专业吐槽
+        communication: 交流分享
     categories:
       - name:  thinking
         title: 闭门思考
@@ -28,6 +29,9 @@ custom:
 
       - name:  criticism
         title: 非专业吐槽
+
+      - name: communication
+        title: 交流分享
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 

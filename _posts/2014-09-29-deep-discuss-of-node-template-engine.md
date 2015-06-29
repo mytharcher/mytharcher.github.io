@@ -12,11 +12,11 @@ tags: [node.js, JavaScript, 模板引擎]
 
 ## 第一轮排除 ##
 
-在上次[node模板引擎简单比较](http://yanjunyi.com/blog/posts/simply-comparison-of-node-template-engine.html)的文章里，其实已经有个简单的筛选了，总结成规则应该是这样的：
+在上次[node模板引擎简单比较](/blog/posts/simply-comparison-of-node-template-engine)的文章里，其实已经有个简单的筛选了，总结成规则应该是这样的：
 
 0.	首先避免使用需要对 HTML 进行转换的 Jade 之类。
 	
-	对于这类需要翻译才能使用的语言工具我是坚决的抵制，比如[恶心的CoffeeScript](http://yanjunyi.com/blog/posts/disgusting-coffeescript.html)。原因是这根本不是一个必要的过程，而且创造一种浏览器默认不支持的语言来表达首先提高了学习成本，特别是如果在团队中合作那就有必要让每个人都学会并配置上适合的开发工具。其次还要再翻译回来，说的难听点实在是脱裤子放屁，即使有自动化工具，但带来便捷上的收益抵不过徒增的成本。
+	对于这类需要翻译才能使用的语言工具我是坚决的抵制，比如[恶心的CoffeeScript](/blog/posts/disgusting-coffeescript)。原因是这根本不是一个必要的过程，而且创造一种浏览器默认不支持的语言来表达首先提高了学习成本，特别是如果在团队中合作那就有必要让每个人都学会并配置上适合的开发工具。其次还要再翻译回来，说的难听点实在是脱裤子放屁，即使有自动化工具，但带来便捷上的收益抵不过徒增的成本。
 
 0.	第二类是原生或者完整语法的 EJS 之类
 	
@@ -71,7 +71,7 @@ tags: [node.js, JavaScript, 模板引擎]
 
 ### 模板复用 ###
 
-在 mustache 里只有一种，就是引入模板片段，类似于其他引擎的 include，符号是`{{>partial}}`。而且这指定的是模板名，在后端程序中通常是直接寻找文件名，但还需要自己映射。另外除了Handlebars其他也不支持继承形式的模板复用，所以我之前写了[MustLayout](yanjunyi.com/blog/posts/npm-mustlayout.html)这个npm包来在express中预处理这两个缺陷。
+在 mustache 里只有一种，就是引入模板片段，类似于其他引擎的 include，符号是`{{>partial}}`。而且这指定的是模板名，在后端程序中通常是直接寻找文件名，但还需要自己映射。另外除了Handlebars其他也不支持继承形式的模板复用，所以我之前写了[MustLayout](/blog/posts/npm-mustlayout)这个npm包来在express中预处理这两个缺陷。
 
 ### 变量 ###
 

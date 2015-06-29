@@ -7,7 +7,7 @@ tags: [HTC Desire, Android, Android 4.4, 刷机]
 
 ![](http://www.theandroidsoul.com/wp-content/uploads/2014/01/htc-desire-j00m-kitkat-rom.png)
 
-在经历过上次[折腾Android刷机的痛苦](/blog/posts/tossing-android.html)之后，我的HTC Desire历经一年我跑在全国各地都运行良好。可就在今天早上起床以后突然就启动不起来了，好在还能进fastboot和recovery模式，我恢复了上一次系统备份，但居然是一年前的。心想既然也是重刷，不如刷个4.4，正巧前几天看到一个老外放出来针对这个手机4.4的ROM，干脆就来试试。
+在经历过上次[折腾Android刷机的痛苦](/blog/posts/tossing-android)之后，我的HTC Desire历经一年我跑在全国各地都运行良好。可就在今天早上起床以后突然就启动不起来了，好在还能进fastboot和recovery模式，我恢复了上一次系统备份，但居然是一年前的。心想既然也是重刷，不如刷个4.4，正巧前几天看到一个老外放出来针对这个手机4.4的ROM，干脆就来试试。
 
 所有的步骤基本都是参照这篇文章：[Update HTC Desire to Android 4.4.2 KitKat with j00m ROM](http://www.theandroidsoul.com/update-htc-desire-android-4-4-2-kitkat-j00m-rom/)，所以我后面也就是大概翻译一下。
 
@@ -69,7 +69,7 @@ ROM链接：<http://j00m.exnix.org/j00m_ev_bravo-nightly-2014.01.02-squished.zip
 
 ## 第六步：a2ext ##
 
-在上次[折腾Android刷机的痛苦](/blog/posts/tossing-android.html)过程里，这是一件很简单的事，于是我想参照在adb shell的命令行执行：
+在上次[折腾Android刷机的痛苦](/blog/posts/tossing-android)过程里，这是一件很简单的事，于是我想参照在adb shell的命令行执行：
 
 	$ cd /data/
 	$ mv app /sd-ext/

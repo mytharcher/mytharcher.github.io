@@ -68,6 +68,12 @@
 		</p>
 	</div>
 
+	<!-- 博客页-固定 -->
+	<ins class="adsbygoogle"
+	     style="display:inline-block;width:234px;height:60px"
+	     data-ad-client="ca-pub-7231324007393765"
+	     data-ad-slot="5765605934"></ins>
+
 </aside>
 
 <script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
@@ -85,5 +91,9 @@ site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.custom.scrollingLoadCount }};
 </script>
 {% include baidu-stats.tpl %}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </body>
 </html>

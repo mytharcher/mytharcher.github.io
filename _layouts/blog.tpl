@@ -68,12 +68,12 @@
 		</p>
 	</div>
 
-	<!-- 博客页-固定 -->
+	<!-- blog-aside -->
 	<ins class="adsbygoogle"
-	     style="display:inline-block;width:234px;height:60px"
+	     style="display:block"
 	     data-ad-client="ca-pub-7231324007393765"
-	     data-ad-slot="5765605934"></ins>
-
+	     data-ad-slot="7629180734"
+	     data-ad-format="auto"></ins>
 </aside>
 
 <script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>

@@ -16,7 +16,7 @@
 {% endfor %}
 </head>
 
-<body class="{{ page.pageClass }}">
+<body class="{{ layout.pageClass }}">
 
 <div class="main">
 	{{ content }}
@@ -67,13 +67,6 @@
 			<a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a>
 		</p>
 	</div>
-
-	<!-- blog-aside -->
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-7231324007393765"
-	     data-ad-slot="7629180734"
-	     data-ad-format="auto"></ins>
 </aside>
 
 <script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
@@ -91,9 +84,5 @@ site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.custom.scrollingLoadCount }};
 </script>
 {% include baidu-stats.tpl %}
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>
 </html>

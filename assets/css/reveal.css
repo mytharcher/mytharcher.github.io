@@ -24,3 +24,18 @@ body {
 	margin: 0.5em 0 1em 0;
 	font-family: inherit;
 }
+
+.reveal table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.reveal table th,
+.reveal table td{
+	border: 1px solid #999;
+	padding: .2em .5em;
+}
+
+.reveal i.fa {
+	font-style: normal;
+	font-family: FontAwesome;
+}

@@ -8,7 +8,7 @@
 <title>{{ site.blog.name }}{% if page.title %} / {{ page.title }}{% endif %}</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-<link href="http://{{ site.host }}/blog/feed.xml" rel="alternate" title="{{ site.blog.name }}" type="application/atom+xml" />
+<link href="http://{{ site.blog.host }}/blog/feed.xml" rel="alternate" title="{{ site.blog.name }}" type="application/atom+xml" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/code/sunburst.css" />

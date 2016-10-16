@@ -6,7 +6,7 @@
 <meta charset="utf-8" />
 <meta name="author" content="{{ site.meta.author.name }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>为自由而工作 - 严俊羿</title>
+<title>陈凸立的简介</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" />
@@ -244,7 +244,7 @@ aside .block a{margin:0;}
 }
 /*#contact a{color: #555;}*/
 #contact .mail:after{
-	content: "mytharcher@gmail.com";
+	content: "sagitony@qq.com";
 }
 
 #timeline{
@@ -512,30 +512,30 @@ aside .block a{margin:0;}
 <body class="page-type-timeline">
 
 <aside>
-	<h1><a href="/"><img src="{{site.meta.gravatar}}{{site.meta.author.gravatar}}?s=32" width="32" height="32" /></a><span data-translate="work-for-free">工作，是为了自由</span></h1>
+	<h1><a href="/"><img src="{{site.meta.gravatar}}{{site.meta.author.gravatar}}?s=32" width="32" height="32" /></a><span data-translate="work-for-youth">趁还年轻，疯狂工作</span></h1>
 	
 	<div id="skills" class="block">
-		<h3 data-translate="programming-skills">编程技能</h3>
+		<h3 data-translate="computer-skills">SKILLS</h3>
 		<ul>
 			<li>
 				<div style="width:90%"></div>
-				<p>JavaScript</p>
+				<p>C Language</p>
+			</li>
+			<li>
+				<div style="width:90%"></div>
+				<p>Fortran</p>
 			</li>
 			<li>
 				<div style="width:85%"></div>
-				<p>HTML5</p>
+				<p>AutoCAD</p>
 			</li>
 			<li>
 				<div style="width:80%"></div>
-				<p>CSS3</p>
+				<p>MS Word/Excel/PPT</p>
 			</li>
 			<li>
-				<div style="width:65%"></div>
-				<p>Node.js</p>
-			</li>
-			<li>
-				<div style="width:60%"></div>
-				<p>PHP</p>
+				<div style="width:70%"></div>
+				<p>Photoshop</p>
 			</li>
 		</ul>
 	</div>
@@ -557,44 +557,14 @@ aside .block a{margin:0;}
 	</div>
 	
 	<div id="contact" class="block">
-		<p><span data-translate="contact-me-description">个人长期承接各类 Web 开发，如果您能提供的时薪不低于$30，请联系我的邮箱：</span> <a href="mailto:" class="mail"></a></p>
+		<p><span data-translate="contact-me-description">对我感兴趣的话，请联系我的邮箱：</span> <a href="mailto:" class="mail"></a></p>
 	</div>
 </aside>
 
 <div class="main">
 	<div id="timeline">
 		<p class="line-end" data-translate="recently">最近</p>
-		<ul class="item-list">
-			{% for item in site.categories.works %}
-			<li class="item">
-				<div class="meta">
-					<i class="fa fa-{{item.icon}}"></i>
-					<p class="date">{{item.date | date: "%Y-%m"}}</p>
-					<i class="arrow-left"></i>
-				</div>
-				<div class="content">
-					<header>
-						<div class="links">
-							{% if item.gitrepo %}<iframe src="http://ghbtns.com/github-btn.html?user=mytharcher&amp;repo={{item.gitrepo}}&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>{% endif %}
-						</div>
-						<h3>{% if item.link %}<a href="{{item.link}}" target="_blank">{{item.title}}</a>{% else %}{{item.title}}{% endif %}</h3>
-						<p class="tags">
-						{% for tag in item.tags %}<span class="tag">{{tag}}</span>{% endfor %}
-						</p>
-					</header>
-					{% if item.figures %}
-					{% assign figures_length = item.figures | size %}
-					<figure class="{% if figures_length > 1 %}multi{% endif %}">
-						{% for img in item.figures %}<img src="{{img.src}}" {% if img.height %}height="{{img.height}}" {% endif %} />{% endfor %}
-					</figure>
-					{% endif %}
-					<article>
-					{{item.content}}
-					</article>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
+		
 		<p class="line-end">...</p>
 	</div>
 </div>

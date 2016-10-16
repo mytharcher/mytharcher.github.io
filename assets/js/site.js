@@ -48,8 +48,8 @@ var site = {
 	Translation: {
 		lang: {
 			en: {
-				name: 'MythArcher Yan',
-				title: 'Web Engineer, Freelancer',
+				name: 'Tobi Chenn',
+				title: 'Engineer who could do anything',
 				works: 'Works',
 				blog: 'Blog',
 				'google-plus': '+me',

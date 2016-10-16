@@ -1,0 +1,875 @@
+---
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="{{ site.meta.author.name }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>陈凸立的简介</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"  />
+<style type="text/css">
+*{box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,li,p,form,dl,dt,dd,figure{margin:0; padding:0; border:0;}
+html,body{height:100%;}
+body{line-height:1.6em; font-family:Helvetica, Arial, sans-serif; color:#555; background: url(http://mbed.qiniudn.com/yanjunyi.com/img/bg-light.jpg) fixed;}
+a{margin:0 2px; color:#06c; text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{margin:0;}
+img{border:0; vertical-align: middle;}
+input,textarea{resize:none;}
+
+@font-face {
+  font-family: 'fa-addition';
+  src: url('http://mbed.qiniudn.com/font/fa-addition.eot');
+  src: url('http://mbed.qiniudn.com/font/fa-addition.eot#iefix') format('embedded-opentype'),
+       url('http://mbed.qiniudn.com/font/fa-addition.woff') format('woff'),
+       url('http://mbed.qiniudn.com/font/fa-addition.ttf') format('truetype'),
+       url('http://mbed.qiniudn.com/font/fa-addition.svg#fa-addition') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fa-addition';
+    src: url('http://mbed.qiniudn.com/font/fa-addition.svg?81684682#fa-addition') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fa-addition";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-firefox:before { content: '\e802'; } /* '' */
+.icon-chrome:before { content: '\e803'; } /* '' */
+.icon-google:before { content: '\e800'; } /* '' */
+.icon-git:before { content: '\e801'; } /* '' */
+
+
+.fa:before{
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	text-align: center;
+}
+
+i.arrow-left{
+	display: inline-block;
+	position: absolute;
+	top: 12px;
+	left: -8px;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;/*
+	border: 1px solid #e0e0e0;
+	border-width: 1px 0 0 1px;*/
+	background: #fff;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.main{
+	position:relative; zoom:1;
+	background:rgba(238,238,238,.4);
+}
+
+aside a{
+	color: rgba(255,255,255,.8);
+}
+aside h1{
+	margin: 1em 0;
+	font-weight: normal;
+}
+aside h1 img{
+	margin-right: 1em;
+	padding: 1px;
+	box-shadow: 0 0 2px rgba(0,0,0,.3);
+	background: rgba(255,255,255,.6);
+}
+aside{background-color: #888; font-size:75%; color: rgba(255,255,255,.8);}
+aside .block{position: relative; margin:1em 0; line-height:1.5em;}
+aside .block h3{margin:1em 0; font-size: 1.2em; font-weight: normal; color: rgba(255,255,255,.6);}
+aside .block a{margin:0;}
+
+
+#skills{
+	width: 200px;
+}
+#skills li{
+	position: relative;
+	list-style: none;
+	width: 100%;
+	margin: 1em 0;
+	height: 18px;
+	overflow: hidden;
+	/*padding: 1px;*/
+	border-radius: 4px;
+	background: #666;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+}
+#skills li div{
+	height: 100%;
+	padding: 0 10px;
+	border-radius: 3px;
+	background: #82C246;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.2);
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+}
+#skills li p{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	padding: 0 10px;
+}
+
+
+#tools ul:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+#tools li{
+	position: relative;
+	float: left;
+	list-style: none;
+	width: 0;
+	height: 0;
+	padding: 9%;
+	/*line-height: 55px;*/
+	overflow-y: hidden;
+	margin: 0 2.5% 2.5% 0;
+	background: #555;
+	text-align: center;
+	font-size: 1.5rem;
+}
+#tools li:nth-child(5n){
+	margin-right: 0;
+}
+#tools li i{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1em;
+	height: 1em;
+	overflow: hidden;
+	margin: -.5em 0 0 -.5em;
+	line-height: 1em;
+
+	-webkit-transition: all ease .3s;
+	-moz-transition: all ease .3s;
+	-ms-transition: all ease .3s;
+	transition: all ease .3s;
+}
+#tools li i[class^="icon-"]:before{
+	margin: 0;
+	font-size: 90%;
+}
+#tools li span{
+	display: block;
+	position: absolute;
+	top: 150%;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	margin-top: -.75em;
+	font-size: 12px;
+
+	-webkit-transition: all ease .3s;
+	-moz-transition: all ease .3s;
+	-ms-transition: all ease .3s;
+	transition: all ease .3s;
+}
+#tools li:hover i{
+	opacity: 0;
+	font-size: 10%;
+}
+#tools li:hover span{
+	display: block;
+	top: 50%;
+	opacity: 1;
+}
+
+#contact{
+	clear: both;
+	width: 300px;
+	margin: auto;
+	margin-top: 3em;
+}
+#contact p{
+	/*color: #555;*/
+	text-align: left;
+}
+/*#contact a{color: #555;}*/
+#contact .mail:after{
+	content: "sagitony@qq.com";
+}
+
+#timeline{
+	position: relative;
+	margin-left: 100px;
+	padding-left: 50px;
+}
+#timeline:before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: -4px;
+	height: 100%;
+	border-left: 4px solid #bbb;
+}
+#timeline p.line-end{
+	position: relative;
+	left: -92px;
+	width: 80px;
+	border-radius: 10px;
+	border: 3px solid #fff;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	color: #666;
+	text-align: center;
+}
+#timeline ul.item-list{
+	position: relative;
+	list-style: none;
+}
+#timeline li.item{
+	position: relative;
+	margin: 30px 0;
+	/*border: 1px solid #e0e0e0;*/
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+#timeline li.item .meta{
+	position: absolute;
+	left: -150px;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	overflow: visible;
+}
+#timeline li.item .meta i.fa{
+	position: absolute;
+	right: 32px;
+	width: 40px;
+	height: 40px;
+	padding: 7px;
+	border-radius: 20px;
+	border: 3px solid #fff;
+	background: #fff;
+	font-size: 20px;
+	color: #666;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+#timeline li.item p.date{
+	position: absolute;
+	left: 0;
+	line-height: 40px;
+	/*color: #fff;*/
+	font-weight: bold;
+	text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#timeline li.item i.arrow-left{
+	left: auto;
+	right: -8px;
+	box-shadow: -1px -1px 0px rgba(0,0,0,.1);
+}
+#timeline li.item .content{
+	position: relative;
+	z-index: 1;
+}
+#timeline li.item header{
+	position: relative;
+	padding: 0 15px;
+	/*border-bottom: 1px solid #e0e0e0;*/
+}
+#timeline li.item header:after{
+	content: "";
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+#timeline li.item header h3{
+	display: block;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 10px;
+	font-weight: normal;
+}
+#timeline li.item header .links{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 40px;
+	padding: 10px;
+	line-height: 20px;
+	font-size: 12px;
+}
+#timeline li.item:hover header .links{
+	display: block;
+}
+#timeline li.item:hover header .link-item{
+	display: inline-block;
+	margin-left: 10px;	
+}
+#timeline li.item header .links a{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	color: #999;
+}
+#timeline li.item header .links a:hover{
+	color: #06c;
+}
+#timeline li.item header .links a i.fa{
+	position: absolute;
+	line-height: 20px;
+	font-size: 1.5em;
+}
+#timeline li.item p.tags{
+	line-height: 40px;
+}
+#timeline li.item span.tag{
+	margin-right: 5px;
+	padding: 2px 10px;
+	border-radius: 3px;
+	background: #ccc;
+	color: #fff;
+	font-size: .8em;
+}
+#timeline li.item figure{
+	border: 1px solid #eee;
+	border-width: 1px 0;
+	padding: 30px 0;
+	text-align: center;
+}
+#timeline li.item figure img{
+	max-width: 100%;
+}
+#timeline li.item figure.multi img{
+	max-width: 50%;
+}
+#timeline li.item article{
+	padding: 15px;
+	font-size: 85%;
+}
+#timeline li.item article p{
+	text-indent: 2em;
+}
+
+@media screen and (min-width:1024px) {
+	.main{
+		min-height: 100%;
+		margin-left: 400px;
+		padding:50px;
+	}
+	aside{
+		position:fixed;
+		width: 400px;
+		left:0;
+		top:0;
+		height:100%;
+		overflow:hidden;
+		padding:30px 50px;
+		text-align: left;
+		box-shadow:-5px 0 5px rgba(0,0,0,.1) inset;
+	}
+
+	aside .block{
+		float: left;
+		width: 100%;
+		max-width: 300px;
+	}
+	aside .block:after{
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+	.main{
+		padding: 1em;
+	}
+	aside{
+		position: relative;
+		padding: 1em;
+	}
+	#skills,#tools{
+		float: left;
+	}
+	#skills{
+		width: 25%;
+		margin-right: 3%;
+	}
+	#tools{
+		width: 72%;
+	}
+
+	#contact{
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	aside,.main{
+		padding: 20px 15px;
+	}
+	#skills{
+		width: 100%;
+	}
+	#timeline{
+		margin-left: 0;
+		padding-left: 0;
+	}
+	#timeline:before{
+		left: 50%;
+		margin-left: -2px;
+	}
+	#timeline p.line-end{
+		left: 50%;
+		margin-left: -40px;
+	}
+	#timeline li.item{
+		margin-top: 100px;
+	}
+	#timeline li.item .meta{
+		left: auto;
+		right: 50%;
+		top: -60px;
+		margin-right: -20px;
+	}
+	#timeline li.item .meta i.fa{
+		right: 0;
+	}
+	#timeline li.item p.date{
+		left: auto;
+		right: 50px;
+	}
+	#timeline li.item i.arrow-left{
+		display: none;
+		right: auto;
+		left: 12px;
+		top: 52px;
+
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+
+</style>
+</head>
+
+<body class="page-type-timeline">
+
+<aside>
+	<h1><a href="/"><img src="https://s.gravatar.com/avatar/ad234cbdb0e2e4bd0799af31117e1048?s=32" width="32" height="32" /></a><span data-translate="work-for-youth">趁还年轻，疯狂工作</span></h1>
+	<div id="evaluation" class="block" >
+		<h3 data-translate="evaluation">自我评价 EVALUATION</h3>
+		<h3><B><p>1.热爱工作，对工作有很强的责任意识和团队协作意识。但过于注重效率，有时会显得急躁。</p>
+			<p>2.喜欢与人沟通，能与上下级建立良好关系。根据领导或上级安排指挥，做好每一项工作任务，并能及时向下级传递上级命令，向上反馈问题。</p>
+			<p>3.乐观向上，待人真诚，能友善处理与他人关系，积极为他人解决问题。</p></B></h3>
+	<div id="skills" class="block">
+		<h3 data-translate="computer-skills">个人技能 SKILLS</h3>
+		<ul>
+			<li>
+				<div style="width:90%"></div>
+				<p>C Language</p>
+			</li>
+			<li>
+				<div style="width:90%"></div>
+				<p>Fortran</p>
+			</li>
+			<li>
+				<div style="width:85%"></div>
+				<p>AutoCAD</p>
+			</li>
+			<li>
+				<div style="width:80%"></div>
+				<p>MS Word/Excel/PPT</p>
+			</li>
+			<li>
+				<div style="width:80%"></div>
+				<p>Corel Videostudio</p>
+			</li>
+			<li>
+				<div style="width:70%"></div>
+				<p>Dreamweaver</p>
+			</li>
+			<li>
+				<div style="width:70%"></div>
+				<p>Photoshop</p>
+			</li>
+			<li>
+				<div style="width:70%"></div>
+				<p>Flash</p>
+			</li>
+			<li>
+				<div style="width:70%"></div>
+				<p>HTML</p>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="contact" class="block">
+		<p><span data-translate="contact-me-description">对我感兴趣的话，请联系我的邮箱：</span> <a href="mailto:" class="mail"></a></p>
+	</div>
+</aside>
+
+<div class="main">
+	<div id="timeline">
+		<p class="line-end" data-translate="recently">Follow Me</p>
+<ul class="item-list">
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-fax"></i>
+					<p class="date"></p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<h3><a href="http://www.tobi.pub/" target="_blank">基本信息</a></h3>
+						<p class="tags">
+						<span class="tag">姓名</span><span class="tag">籍贯</span><span class="tag">民族</span><span class="tag">出生年月</span><span class="tag">政治面貌</span><span class="tag">最高学历</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="http://7xuyk2.com1.z0.glb.clouddn.com/web/img/1%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AFc.jpg"  />
+					</figure>
+					
+					<article>
+					<p>因为涉及到个人隐私，在这里只展示一部分个人信息</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-university"></i>
+					<p class="date"></p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3><a href="http://www.scu.edu.cn/" target="_blank">教育经历</a></h3>
+						<p class="tags">
+						<span class="tag">四川大学</span><span class="tag">985、211重点高校</span><span class="tag">本科</span><span class="tag">硕士</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="http://7xuyk2.com1.z0.glb.clouddn.com/web/img/2%E6%95%99%E8%82%B2%E7%BB%8F%E5%8E%86.jpg"  />
+					</figure>
+					
+					<article>
+					<p>2017届应届毕业研究生，将于2017年6月从四川大学毕业，理想工作地是<b>成都</b></p>
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-users"></i>
+					<p class="date"></p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3><a href="http://www.scu.edu.cn/" target="_blank">学生工作</a></h3>
+						<p class="tags">
+						<span class="tag">岩土工程协会会长</span><span class="tag">青年志愿者队队长</span><span class="tag">水利1班班长</span>
+						</p>
+					</header>
+					
+					
+					<figure class="multi">
+						<img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/cyeachina-cms-list.jpg"  /><img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/cyeachina-cms-occupation.jpg"  />
+					</figure>
+					
+					<article>
+					<p>客户网站CMS系统定制开发。PHP后端使用Codeigniter框架，页面表现层使用Bootstrap。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-users"></i>
+					<p class="date">2013-03</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3><a href="http://ashish-agrawal.com/" target="_blank">Ashish个人网站</a></h3>
+						<p class="tags">
+						<span class="tag">HTML5</span><span class="tag">CSS3</span>
+						</p>
+					</header>
+					
+					
+					<figure class="multi">
+						<img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/ashish-home.jpg"  /><img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/ashish-photos.jpg"  />
+					</figure>
+					
+					<article>
+					<p>国外客户网站开发。使用HTML5 history API完成单页式站点开发，并以丰富的CSS3效果增强体验。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-building-o"></i>
+					<p class="date">2012-12</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3>离开百度，开始自由职业</h3>
+						<p class="tags">
+						<span class="tag">百度</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/baidu.png" height="55"  />
+					</figure>
+					
+					<article>
+					<p>结束毕业后5年多百度的旅程，并离开北京，开始尝试自由职业的生活。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-code-fork"></i>
+					<p class="date">2012-11</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							<iframe src="http://ghbtns.com/github-btn.html?user=mytharcher&amp;repo=rainbow&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>
+						</div>
+						<h3><a href="https://www.npmjs.org/package/rainbow" target="_blank">npm: Rainbow</a></h3>
+						<p class="tags">
+						<span class="tag">npm</span><span class="tag">node.js</span><span class="tag">express</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="https://nodei.co/npm/rainbow.png?downloads=true" height="69"  />
+					</figure>
+					
+					<article>
+					<p>针对node.js下Express开发的一个中间件，可以直接使用文件路径映射来简化RESTful的路由配置。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-building-o"></i>
+					<p class="date">2012-09</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3><a href="http://union.baidu.com/" target="_blank">百度联盟系统4.0重构</a></h3>
+						<p class="tags">
+						<span class="tag">百度</span><span class="tag">重构</span><span class="tag">架构设计</span><span class="tag">Ajax</span>
+						</p>
+					</header>
+					
+					
+					<figure class="multi">
+						<img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/union-cpro.jpg"  /><img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/union-customer.jpg"  />
+					</figure>
+					
+					<article>
+					<p>使用纯Ajax框架ER和ESUI组件库重构升级百度联盟会员系统，极大的提升用户体验和性能。在其中负责前端架构设计，基础模块编写，大部分接口制定，以及系统最核心的代码位管理和报表模块开发。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-code-fork"></i>
+					<p class="date">2012-07</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							<iframe src="http://ghbtns.com/github-btn.html?user=mytharcher&amp;repo=SimpleGray&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>
+						</div>
+						<h3><a href="https://github.com/mytharcher/SimpleGray" target="_blank">Jekyll站点主题：SimpleGray</a></h3>
+						<p class="tags">
+						<span class="tag">设计</span><span class="tag">Jekyll</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/SimpleGray.jpg"  />
+					</figure>
+					
+					<article>
+					<p>静态站点生成器Jekyll的一个主题设计，利用这个模板可以帮助你在GitHub上快速的搭建一个极简风格的博客站点。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-code-fork"></i>
+					<p class="date">2011-08</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3><a href="http://elfjs.com/" target="_blank">elf+js</a></h3>
+						<p class="tags">
+						<span class="tag">JavaScript</span><span class="tag">Library</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="http://elfjs.com/assets/img/logo.png" height="50"  />
+					</figure>
+					
+					<article>
+					<p>一个简单且组织灵活的JavaScript基础库。</p>
+
+<p>按照Java包命名的结构提供了大量的常规工具，诸如类管理、DOM操作、Ajax处理、动画效果、文本处理等。并为开发人员愉悦的书写代码而设计，大量常用功能的快捷书写形式能给你带来和jQuery一样飞一般的享受。同时支持定制化打包，可以为任何应用定制化最小打包。</p>
+
+					</article>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="meta">
+					<i class="fa fa-building-o"></i>
+					<p class="date">2007-08</p>
+					<i class="arrow-left"></i>
+				</div>
+				<div class="content">
+					<header>
+						<div class="links">
+							
+						</div>
+						<h3>加入百度</h3>
+						<p class="tags">
+						<span class="tag">百度</span>
+						</p>
+					</header>
+					
+					
+					<figure class="">
+						<img src="http://mbed.qiniudn.com/yanjunyi.com/img/works/baidu.png" height="55"  />
+					</figure>
+					
+					<article>
+					<p>2007年6月毕业于南京农业大学，并于同年加入百度。先后在百度用户体验部，前端研发部，商务搜索部和联盟事业部任前端工程师和高级前端工程师。曾负责百度多套新旧商务平台系统的架构设计和重构开发工作，包括但不限于百度联盟，网盟推广投放系统等。</p>
+
+					</article>
+				</div>
+			</li>
+		</ul>
+		</li>
+</ul>
+		<p class="line-end">...</p>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/site.js"></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa37d06f71b8f8aec3a1d627f5a8d7a72' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+---
+layout: presentation
+category: communication
+title: 再造轮子之 JS 模板引擎
+---
+
+{% raw %}
+
+<section>
+	<h3>再造轮子之--</h3>
+	<h1>JS 模板引擎</h1>
+	<p>
+		<small><a href="http://yanjunyi.com/">严俊羿</a>(造轮子工程师)</small>
+	</p>
+	<p>
+		<small>@2014-11-22</small>
+	</p>
+</section>
+
+<section data-markdown>
+	<script type="text/template">
+	## What & Why?
+
+	```
+	html = '<h1>' + title + '</h1>';
+	```
+	↓
+	```
+	data = {title: 'abc'};
+	html = '<h1>{title}</h1>'.replace(/\{([^\}]+)\}/g, function (all, v) {
+		return data[v];
+	});
+	```
+	↓
+
+	逻辑控制`if`/`else`/`for`
+
+	↓
+
+	模板复用`include`/`layout`
+	</script>
+</section>
+
+<section data-markdown>
+	<script type="text/template">
+	## 那些年我们用过的模板引擎
+	
+	* ASP, JSP, PHP
+	* Velocity, FreeMarker, Smarty
+	* ctpl, Jinja2, Liquid...
+	</script>
+</section>
+
+<section>
+	<section>
+		<h2>Node.js 时代的模板引擎</h2>
+		<figure>
+			<a href="http://garann.github.io/template-chooser/" target="_blank"><img alt="Tempate Engine Chooser" src="http://mbed.qiniudn.com/yanjunyi.com/img/wheel-of-js-template/template-engine-chooser.jpg" /></a>
+		</figure>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## [ejs](http://embeddedjs.com/) ##
+
+		表达式和控制语法都是原生 JavaScript 的
+
+		```
+		<ul>
+		<% for(var i=0; i<supplies.length; i++) { %>
+			<li><%= supplies[i] %></li>
+		<% } %>
+		</ul>
+		```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## [Mustache.js](http://mustache.github.com/) ##
+
+		轻逻辑体系的始祖（Hogan, Handlebars.js）
+
+		```
+		<h1>{{header}}</h1>
+		{{#bug}}
+		{{/bug}}
+		{{#items}}
+			{{#first}}
+			<li><strong>{{name}}</strong></li>
+			{{/first}}
+			{{#link}}
+			<li><a href="{{url}}">{{name}}</a></li>
+			{{/link}}
+		{{/items}}
+		{{#empty}}
+			<p>The list is empty.</p>
+		{{/empty}}
+		```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## [jade](http://jade-lang.com/) ##
+
+		完全没有html了，代码比较像zencoding的风格
+
+		```
+		doctype 5
+		html(lang="en")
+			head
+			title= pageTitle
+			body
+			h1 Jade - node template engine
+			#container
+				if youAreUsingJade
+				p You are amazing
+				else
+				p Get on it!
+		```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## [HAML](http://haml.info/) ##
+
+		又一个不写HTML标签的模板
+
+		```
+		%section.container
+			%h1= post.title
+			%h2= post.subtitle
+			.content
+			= post.content
+		```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## [CoffeeKup](http://coffeekup.org/) ##
+
+		CoffeeScript 的 Ruby 风格
+
+		```
+		doctype 5
+		html ->
+			head ->
+			meta charset: 'utf-8'
+			title "#{@title or 'Untitled'} | A completely plausible website"
+			body ->
+			header ->
+				h1 @title or 'Untitled'
+				
+				nav ->
+				ul ->
+					(li -> a href: '/', -> 'Home') unless @path is '/'
+					li -> a href: '/chunky', -> 'Bacon!'
+					switch @user.role
+					when 'owner', 'admin'
+						li -> a href: '/admin', -> 'Secret Stuff'
+					when 'vip'
+						li -> a href: '/vip', -> 'Exclusive Stuff'
+					else
+						li -> a href: '/commoners', -> 'Just Stuff'
+		```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## 百花齐放
+
+		到底选哪个？
+
+		用的不爽？功能欠缺？个人偏好？
+		</script>
+	</section>
+</section>
+
+<section data-markdown>
+	<script type="text/template">
+	## 尝试自己造一个
+
+	### 我需要的功能
+
+	* 基本功能
+	* 语法简洁，可自定义
+	* 可高度复用
+	* 兼容前后端
+	* 预编译
+	</script>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+		## 怎么造？
+
+		先看看别人的源码
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## 两种解析类型
+
+		0. 切分控制符进行正则匹配（EJS, mustache, etpl等大多数）
+		0. 完整语法分析构建 AST（dust.js）
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+		## 折中方案
+
+		### 简易版
+
+		搜索字符串，松散正则匹配，表达式解析引擎
+
+		### 完整版
+
+		利用语法解析引擎创建完整的语法分析树
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## 利用现有的强大工具
+
+		* [PEG.js](http://pegjs.majda.cz/)，dust.js 的源码里用到的 JS 的语法分析器
+		* [jsep](http://jsep.from.so/)，兼容 Esprima 的最小 JS 表达式解析实现
+
+		[基于 PEG.js 的表达式构建](https://gist.github.com/mytharcher/d1e8a3bed8a3e7bd656c)
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+		## 简易版的实现
+
+		解析并渲染如下模板内容
+		```
+		{$ list = ["a", "b", "c"] /}
+		<h1>Hello {{name}}!</h1>
+		{? list.length }
+		<ul>
+			{# list : item @ index }
+			<li>{{index}}: {{item}}</li>
+			{/}
+		</ul>
+		{^}
+		<p>none in {{ date | date:"Y-m-d" | html }}</p>
+		{/}
+		```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+		## JS 模板引擎的 Destination
+
+		[进击！前端模板工程化](https://github.com/aui/tmodjs/blob/master/doc/why-tmodjs.md)
+		</script>
+	</section>
+</section>
+
+<section data-markdown>
+	<script type="text/template">
+	## To be continued...
+	
+	<https://github.com/mytharcher/yust>
+	
+	Powered by [reveal.js](https://github.com/hakimel/reveal.js)
+	</script>
+</section>
+
+{% endraw %}

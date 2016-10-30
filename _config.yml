@@ -1,19 +1,31 @@
 markdown: kramdown
 safe: false
-permalink: /blog/posts/:title
+permalink: /:categories/:title
 exclude:
   - README.md
+
+defaults:
+  -
+    scope:
+        path: blog/_posts
+        type: posts
+    values:
+        permalink: blog/posts/:title
+        layout: post
+  -
+    scope:
+        path: discovery/_posts
+    values:
+        layout: post
 
 blog:
     host: yanjunyi.com
     name: 闭门造轮子
     desc: 造轮子工程师的代码笔记
 
-custom:
     category:
         thinking: 闭门思考
         experience: 问题即经验
-        discovery: 日新月异
         criticism: 非专业吐槽
         communication: 交流分享
     categories:
@@ -23,16 +35,11 @@ custom:
       - name:  experience
         title: 问题即经验
 
-      - name:  discovery
-        title: 日新月异
-
       - name:  criticism
         title: 非专业吐槽
 
       - name: communication
         title: 交流分享
-
-    scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
     author:

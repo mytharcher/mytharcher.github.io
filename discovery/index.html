@@ -1,4 +1,12 @@
+---
+layout: list
+title: 日新月异
+---
+
 {% include header.tpl %}
+
+<!-- 日新月异分类 -->
+{% assign list = site.categories.discovery %}
 
 {% for post in list limit:limitation %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -6,17 +14,15 @@
 
 {% if this_year != last_year %}
 {% unless forloop.first %}
-	</ul>
-</section>
+</article>
 {% endunless %}
-<section>
+<article>
 	<h2>{{ this_year }}</h2>
-	<ul>
 {% endif %}
-	<li><time>{{ post.date | date: "%Y-%m-%d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+	<h3>{{ post.date | date: "%b" }}</h3>
+	{{ post.content }}
 {% if forloop.last %}
-	</ul>
-</section>
+</article>
 {% endif %}
 {% capture last_year %}{{ this_year }}{% endcapture %}
 

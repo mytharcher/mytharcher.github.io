@@ -3,6 +3,30 @@ layout: list
 ---
 
 <!-- 首页即博客列表 -->
-{% assign list = site.posts %}
-{% assign preview = true %}
-{% include list.tpl %}
+{% assign list = site.categories.blog %}
+{% assign limitation = 10 %}
+
+{% include header.tpl %}
+
+{% for post in list limit:limitation %}
+{% if post.layout != 'presentation' %}
+<article>
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	{% include meta.tpl %}
+	<div class="article-content">
+	{{ post.excerpt }}
+	<p><a href="{{ post.url }}">阅读全文</a></p>
+	</div>
+</article>
+{% endif %}
+{% endfor %}
+
+{% if list == null %}
+<article class="empty">
+	<p>还没有文章</p>
+</article>
+{% elsif list.size > limitation %}
+<article>
+	<p><a href="archive">全部文章归档</a></p>
+</article>
+{% endif %}

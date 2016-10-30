@@ -11,7 +11,7 @@ input,textarea{resize:none;}
 
 .main{background-color: #fff;}
 
-header{font-size:80%;}
+header{font-size:80%; margin-bottom: 2em;}
 header h1 .minor{color:#999; font-weight:normal;}
 header .additional{font-size:90%; color:#ccc;}
 
@@ -38,6 +38,16 @@ footer p{color:#aaa; font-size:75%; line-height:1.6em;}
 .page-type-post article .permalink{font:italic 85%/1.6em Arial, Helvetica, sans-serif; color:#999;}
 
 .page-type-list article h2{margin-bottom:0;}
+.page-type-list section{
+	margin: 2em 0;
+}
+.page-type-list section ul{
+	margin: .5em 0 0 2em;
+}
+.page-type-list section li time{
+	margin-right: .5em;
+	color: #999;
+}
 
 .trace{font-size:80%; color:#999;}
 

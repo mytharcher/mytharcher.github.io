@@ -1,0 +1,195 @@
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none;}
+
+html,body{height: 100%; margin: 0; padding: 0; border: 0;}
+body{font-family:"Microsoft YaHei","微软雅黑",Arial,Helvetica,sans-serif; align-items: center; justify-content: center;}
+figure{display: block;}
+
+ul,ol,figure,form{margin: 0; padding: 0;}
+img{border: 0; vertical-align: middle;}
+
+html{background-image: url(http://mbed.qiniudn.com/yanjunyi.com/img/bg-light.jpg);}
+#page{display: -webkit-flex; display: flex; background-color: rgba(85,85,85,0); color: #eee; min-height: 100%;
+	-webkit-transition: background-color ease 5s;
+	-moz-transition: background-color ease 5s;
+	-ms-transition: background-color ease 5s;
+	transition: background-color ease 5s;
+}
+a{color: #eee; text-decoration: none;}
+a:hover{color: #fff; text-decoration: underline;}
+
+#card{position: relative; margin: auto;
+	-webkit-transition: width ease .5s, height ease .5s;
+	-moz-transition: width ease .5s, height ease .5s;
+	-ms-transition: width ease .5s, height ease .5s;
+	transition: width ease .5s, height ease .5s;
+}
+#card header{position: relative; height: 105px; padding: 10px 0 0 100px; color: #666;
+	-webkit-transition: color ease 5s;
+	-moz-transition: color ease 5s;
+	-ms-transition: color ease 5s;
+	transition: color ease 5s;
+}
+#card header img{position: absolute; left: 0; top: 0; padding: 2px; box-shadow: 0 0 2px rgba(0,0,0,.3); background: rgba(255,255,255,.6);}
+#card h1,#card h2{margin: 0; font-weight: normal;}
+#card h2{margin-top: .5em; font-size: 1.1em;}
+#card ul{position: relative; padding: 0;
+	-webkit-transition: width ease .5s, height ease .5s;
+	-moz-transition: width ease .5s, height ease .5s;
+	-ms-transition: width ease .5s, height ease .5s;
+	transition: width ease .5s, height ease .5s;
+}
+#card li{position: absolute; list-style: none; width: 200px; height: 200px; overflow: hidden; line-height: 200px; background-color: #888; text-align: center; font-size: 4rem;
+	-webkit-transition: background-color ease .3s, top ease .5s, left ease .5s, width ease .5s, height ease .5s;
+	-moz-transition: background-color ease .3s, top ease .5s, left ease .5s, width ease .5s, height ease .5s;
+	-ms-transition: background-color ease .3s, top ease .5s, left ease .5s, width ease .5s, height ease .5s;
+	transition: background-color ease .3s, top ease .5s, left ease .5s, width ease .5s, height ease .5s;
+}
+#card li.half{height: 95px; line-height: 95px; font-size: 2rem;}
+#card li.quarter{width: 95px; height: 95px; line-height: 95px; font-size: 2rem;}
+#card a{display: inline-block; width: 100%; height: 100%; overflow: hidden;}
+#card a:hover{text-decoration: none;}
+#card li span{position: absolute; top: 100%; left: 0; width: 100%; height: 100%; opacity: 0; font-size: 62.5%;
+	-webkit-transition: top ease .3s, opacity ease .3s;
+	-moz-transition: top ease .3s, opacity ease .3s;
+	-ms-transition: top ease .3s, opacity ease .3s;
+	transition: top ease .3s, opacity ease .3s;
+}
+#card li i{display: inline-block; width: 100%; height: 100%;
+	-webkit-transition: opacity ease .3s, font-size ease .3s, color ease .3s;
+	-moz-transition: opacity ease .3s, font-size ease .3s, color ease .3s;
+	-ms-transition: opacity ease .3s, font-size ease .3s, color ease .3s;
+	transition: opacity ease .3s, font-size ease .3s, color ease .3s;
+}
+#card li:hover i{opacity: 0; font-size: 10%;}
+#card li:hover span{display: block; top: 0; opacity: 1;}
+#link-works{left: 0; top: 0;}
+#link-works:hover{background-color: #39c;}
+#link-blog:hover{background-color: #d81;}
+#link-github:hover{background-color: #333;}
+#link-mail:hover{background-color: #595;}
+#link-mail span:after{content: "mytharcher@gmail.com"; font-size: 1rem;}
+#link-google-plus:hover{background-color: #dd4b39;}
+#link-more:hover{background-color: #fff;}
+li#link-wechat span{top: 0;}
+li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
+#card ul:after{content: ""; clear: both; display: block;}
+
+@media (min-width: 801px) {
+	#card{width: 725px;}
+	#card ul{width: 725px; height: 200px;}
+	#card header{position: absolute; top: -105px;}
+	#link-blog{left: 210px; top: 0;}
+	#link-mail{left: 420px; top: 0;}
+	#link-wechat{left: 630px; top: 0;}
+	#link-github{left: 420px; top: 105px;}
+	#link-google-plus{left: 525px; top: 105px;}
+	#link-more{left: 630px; top: 105px;}
+	#card ul{
+		-webkit-transition: width ease .5s;
+		-moz-transition: width ease .5s;
+		-ms-transition: width ease .5s;
+		transition: width ease .5s;
+	}
+}
+
+@media (max-width: 550px) {
+	body.device-mobile #page{display: block; padding: 20px 0;}
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+	#card,#card ul{
+		-webkit-transition: width ease .5s;
+		-moz-transition: width ease .5s;
+		-ms-transition: width ease .5s;
+		transition: width ease .5s;
+	}
+}
+
+@media (min-width: 551px) and (max-width: 800px) {
+	#card{width: 515px;}
+	#card ul{width: 515px; height: 305px;}
+	#link-blog{left: 210px; top: 0;}
+	li#link-mail.half{left: 0; top: 210px; width: 305px;}
+	#link-wechat{left: 315px; top: 210px;}
+	#link-github{left: 420px; top: 0;}
+	#link-google-plus{left: 420px; top: 105px;}
+	#link-more{left: 420px; top: 210px;}
+}
+
+@media (min-width: 451px) and (max-width: 550px) {
+	#card{width: 410px;}
+	#card ul{width: 410px; height: 410px;}
+	#link-blog{left: 210px; top: 0;}
+	li#link-mail.half{left: 0; top: 210px; width: 410px;}
+	#link-wechat{left: 210px; top: 315px;}
+	#link-github{left: 0; top: 315px;}
+	#link-google-plus{left: 105px; top: 315px;}
+	#link-more{left: 315px; top: 315px;}
+}
+@media (max-width: 480px){
+	#card,#card ul{
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		transition: none;
+	}
+}
+@media (max-width: 450px) {
+	#card{width: 100%; height: 100%; padding: 10px;}
+	#card ul{width: 0; height: 0; padding: 50%;
+	}
+	#card li{width: 49%; height: 49%;
+	}
+	#card li.half{width: 100%; height: 23.5%;}
+	#card li.quarter{width: 23.5%; height: 23.5%;}
+	#card li a{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	#link-blog{left: 51%; top: 0;}
+	li#link-mail.half{left: 0; top: 51%;}
+	#link-wechat{left: 51%; top: 76.5%;}
+	#link-github{left: 0%; top: 76.5%;}
+	#link-google-plus{left: 25.5%; top: 76.5%;}
+	#link-more{left: 76.5%; top: 76.5%;}
+}
+@media (max-width: 320px) {
+	#card li{line-height: 147px;}
+	#card li.half{line-height: 70px;}
+	#card li.quarter{line-height: 70px;}
+}
+/*
+@media (min-width: 320px) and (max-width: 450px) {
+	#card{width: 305px; height: 620px;}
+	#link-blog{left: 0; top: 210px;}
+	li#link-mail.half{left: 0; top: 420px; width: 305px;}
+	#link-wechat{left: 210px; top: 210px;}
+	#link-github{left: 210px; top: 0;}
+	#link-google-plus{left: 210px; top: 105px;}
+	#link-more{left: 210px; top: 315px;}
+}
+
+@media (max-width: 319px) {
+	#card{width: 0; height: 0; padding: 10px;}
+	#card ul{width: 0; height: 0; padding: 84% 50%;}
+	#card li{width: 0; height: 0; padding: 32%;
+		-webkit-transition: background-color ease .3s;
+		-moz-transition: background-color ease .3s;
+		-ms-transition: background-color ease .3s;
+		transition: background-color ease .3s;
+	}
+	#card li.half{width: 0; height: 0; padding: 16% 50%;}
+	#card li.quarter{width: 0; height: 0; padding: 16%;}
+	#card li a{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	#link-blog{left: 0; top: 39.2857%;}
+	li#link-mail.half{left: 0; top: 78.5714%;}
+	#link-wechat{left: 39.2857%; top: 39.2857%;}
+	#link-github{left: 39.2857%; top: 0;}
+	#link-google-plus{left: 39.2857%; top: 20.2381%;}
+	#link-more{left: 39.2857%; top: 60.7123%;}
+}*/

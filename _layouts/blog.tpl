@@ -11,7 +11,7 @@
 {% endfor %}
 </head>
 
-<body class="{{ layout.pageClass }}">
+<body class="{% if page.pageClass %}{{ page.pageClass }}{% else %}{{ layout.pageClass }}{% endif %}">
 
 <div class="main">
 	{{ content }}

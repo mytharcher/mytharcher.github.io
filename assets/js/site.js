@@ -48,7 +48,7 @@ var site = {
 	Translation: {
 		lang: {
 			en: {
-				name: 'MythArcher Yan',
+				name: 'Junyi Yan',
 				title: 'Web Engineer, Freelancer',
 				works: 'Works',
 				blog: 'Blog',

@@ -19,7 +19,7 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 
 这是node下Express开发的一个中间件，可以直接使用文件路径映射来简化RESTful的路由配置。
 
-使用Rainbow后所有的路由配置只需要往`controllers/`目录里扔文件就可以了。另外还支持方便的配置请求预处理的过滤器，同样的，往`filters/`目录里扔文件就可以了。
+使用Rainbow后所有的路由配置只需要往`controllers/`目录里扔文件就可以了。
 
 ### 安装 ###
 
@@ -37,7 +37,7 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 	var app = express();
 	
 	// 加入这句话初始化app的所有路由
-	rainbow.route(app);
+	app.use(rainbow());
 	
 	app.listen(6060);
 
@@ -47,38 +47,40 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 
 这个例子假设在你的应用目录有这样一个文件`controllers/something.js`：
 
-	exports.get = function (req, res, next) {
+	exports.GET = function (req, res, next) {
 		res.send(200, 'Simple getting.');
 	};
 
 如果需要在客户端使用`GET`方式请求`http://yourapp/something`的时，先使用`filters/authorization.js`进行验证检查，可以简单的定义一个过滤器：
 
-	exports.get = function (req, res, next) {
+	var authorization = require('../filters/authorization');
+
+	exports.GET = function (req, res, next) {
 		res.send(200, 'Got you!');
 	};
 	// 添加过滤器
-	exports.get.filters = ['authorization'];
+	exports.GET.filters = [authorization];
 
 这样当过滤器`authorization`通过后会继续正常处返回`200`成功状态，并在页面上显示`Got you!`。
 
 对于每个RESTful的资源，由于同一个URL只映射一个文件，所有增删改查都定义在一个文件中，例如：
 
-	exports.get = function (req, res, next) {
+	exports.GET = function (req, res, next) {
 		User.find({where: req.query.name}).success(function (user) {
 			res.send(200, user);
 		});
 	};
 	
-	exports.put = function (req, res, next) {
+	exports.PUT = function (req, res, next) {
 		User.create(req.body).success(function (user) {
 			res.send(201, user.id);
 		});
 	};
 	
-	// 你可以定义其他`post`和`delete`的路由处理
+	// 你可以定义其他`POST`和`DELETE`的路由处理
 	// ...
 
-如果不想使用`get`/`post`/`put`/`delete`定义，那么可以直接`exports`一个函数，处理所有方法在这个URL上的请求：
+如果不想使用`GET`/`POST`/`PUT`/`DELETE`定义，那么可以直接`exports`一个函数，处理所有方法在这个URL上的请求：
 
 	module.exports = function (req, res, next) {
 		// all your process
@@ -88,26 +90,26 @@ Stackoverflow刚好也有人问用户验证的拦截器怎么设计，我也根�
 
 Rainbow从0.1.0版本开始支持基于参数优化的URL（类似`/path/user/:id`）。现在你可以使用`params`这个属性来扩展定义当前controller的参数部分，之后就可以和Express原生定义一样在处理中使用参数部分，例如：
 
-	exports.get = function (req, res, next) {
+	exports.GET = function (req, res, next) {
 		var id = req.params.id;
 		// your business
 	};
 
-	exports.get.params = ':id?';
+	exports.GET.params = ':id?';
 
 对，你只需添加当前controller代表的URL之后的内容。你也可以使用正则表达式来进行参数自动分析，同样也只需添加controller代表的URL之后的规则：
 
-	exports.get = function (req, res, next) {
+	exports.GET = function (req, res, next) {
 		console.log(req.params);
 	}
 
-	exports.get.params = /(\d+)(?:\.\.(\d+))?/;
+	exports.GET.params = /(\d+)(?:\.\.(\d+))?/;
 
 但是使用正则的时候请务必注意，**不要**使用作为起始判定的`^`和作为结束判定的`$`，这会导致rainbow无法解析这个参数。不过用在集合取反判定里的`^`是没有问题的，例如：`[^a-z]`。
 
 ### Filters ###
 
-路由控制器中可以配置`filters`队列，这是一个由字符串标识组成的数组，可以为空，在该请求被路由到时会顺序执行。如果配置了过滤器队列，那么数组中每个字符串都指向`filters/`目录里的文件模块。例如在介绍Controllers最开始的例子里，如果要做一个基于登录权限的拦截器，就可以在`filters/`目录添加一个`authorization.js`：
+路由控制器中可以配置`filters`队列，这是一个由路由中间件函数的数组，可以为空，在该请求被路由到时会顺序执行。例如在介绍Controllers最开始的例子里，如果要做一个基于登录权限的拦截器，就可以在`filters/`目录添加一个`authorization.js`：
 
 	module.exports = function (req, res, next) {
 		console.log('processing authorization...');
@@ -134,12 +136,13 @@ Rainbow从0.1.0版本开始支持基于参数优化的URL（类似`/path/user/:i
 
 ### 修改默认目录 ###
 
-Rainbow会默认使用应用目录下的`controllers/`和`filters/`目录寻找路由控制器和过滤器。如果不希望是这两个目录可以在初始化的时候传入一个配置对象进行修改：
+Rainbow会默认使用应用目录下的`controllers/`目录寻找路由控制器。如果不希望是这个目录可以在初始化的时候传入一个配置对象进行修改：
 
-	rainbow.route(app, {
-		controllers: '/your/controllers/path',
-		filters: '/your/filters/path'
-	});
+	app.use(rainbow({
+		controllers: '/your/controllers/path'
+	}));
+
+**注意**：这里配置的路径必须是绝对路径。
 
 ### 有问题？ ###
 
@@ -149,7 +152,7 @@ Rainbow会默认使用应用目录下的`controllers/`和`filters/`目录寻找�
 
 ### MIT Licensed ###
 
-其实就20行的代码，结果写了近10000个Byte的文档。真正要发布一个可以给别人用的东西很不容易。当然我还没告诉你我一行单测代码都没写！
+其实就20行的代码，结果写了近10000个Byte的文档。真正要发布一个可以给别人用的东西很不容易。当然我还没告诉你我一行单测代码都没写！（直到五年以后我才添加了测试用例的代码 Updated at 2017-09-11）
 
 -EOF-
 

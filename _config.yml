@@ -41,6 +41,8 @@ blog:
       - name: communication
         title: 交流分享
 
+    scrollingLoadCount: 0
+
 meta:
     author:
         name: mytharcher

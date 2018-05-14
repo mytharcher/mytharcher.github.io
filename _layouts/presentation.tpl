@@ -1,20 +1,15 @@
 <!doctype html>
 <html lang="zh">
 <head>
-<meta charset="utf-8">
 <title>{{ post.title }}</title>
-<meta name="author" content="{{ site.author }}">
+{% include head.tpl %}
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<link rel="icon" href="/favicon.png" type="image/x-icon" />
-<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-
 <link rel="stylesheet" href="/lib/reveal.js/css/reveal.css">
 <link rel="stylesheet" href="/lib/reveal.js/css/theme/default.css" id="theme">
 <link rel="stylesheet" href="/assets/css/reveal.css">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
 
 <style>
 .sec-new-things li{

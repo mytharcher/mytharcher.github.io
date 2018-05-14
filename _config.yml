@@ -51,5 +51,5 @@ meta:
         gravatar: 1cd8c12591616d8c22aaa624f8c07834  # Gravatar头像标识
 
     disqus: disqus.com/embed.js                     # Disqus评论的JS地址
-    gapi: http://www.google.com/jsapi               # Google API地址
-    gravatar: http://en.gravatar.com/avatar/        # Gravatar头像服务器地址
+    gapi: https://www.google.com/jsapi               # Google API地址
+    gravatar: https://en.gravatar.com/avatar/        # Gravatar头像服务器地址

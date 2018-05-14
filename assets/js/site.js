@@ -58,7 +58,7 @@ var site = {
 				'programming-skills': 'Programming Skills',
 				'using-tools': 'Using Tools',
 				'contact-me': 'Contact Me',
-				'contact-me-description': 'I undertake various types of Web development in long term. If you can provide a payment not lower than $20/h, feel free contact me: ',
+				'contact-me-description': 'I undertake various types of Web development in long term. If you can provide a payment not lower than $30/h, feel free contact me: ',
 				recently: 'Recently'
 			}
 		},

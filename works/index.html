@@ -11,7 +11,7 @@
 <body class="page-type-timeline">
 
 <aside>
-	<h1><a href="/"><img src="{{ site.meta.gravatar }}{{ site.meta.author.gravatar }}?s=32" width="32" height="32" /></a><span data-translate="work-for-free">工作，是为了自由</span></h1>
+	<h1><a href="/"><img src="{{ site.meta.gravatar }}{{ site.meta.author.gravatar }}?s=32" width="32" height="32" /></a><span data-translate="work-for-freedom">工作，是为了自由</span></h1>
 	
 	<div id="skills" class="block">
 		<h3 data-translate="programming-skills">编程技能</h3>
@@ -29,20 +29,16 @@
 				<p>CSS3</p>
 			</li>
 			<li>
-				<div style="width:65%"></div>
+				<div style="width:70%"></div>
+				<p>React &amp; Redux</p>
+			</li>
+			<li>
+				<div style="width:70%"></div>
 				<p>Node.js</p>
 			</li>
 			<li>
 				<div style="width:60%"></div>
 				<p>PHP</p>
-			</li>
-			<li>
-				<div style="width:60%"></div>
-				<p>React &amp; Redux</p>
-			</li>
-			<li>
-				<div style="width:50%"></div>
-				<p>Angular 1.x</p>
 			</li>
 		</ul>
 	</div>
@@ -53,8 +49,8 @@
 			<li><i class="fa fa-apple"></i><span>Mac</span></li>
 			<li><i>S</i><span>Sublime</span></li>
 			<li><i class="fa fa-git-square"></i><span>Git</span></li>
-			<li><i class="icon-chrome"></i><span>Chrome</span></li>
-			<li><i class="icon-firefox"></i><span>Firefox</span></li>
+			<li><i class="fa fa-chrome"></i><span>Chrome</span></li>
+			<li><i class="fa fa-firefox"></i><span>Firefox</span></li>
 			<li><i class="fa fa-google"></i><span>Google</span></li>
 			<li><i class="fa fa-github"></i><span>GitHub</span></li>
 			<li><i class="fa fa-bitbucket"></i><span>BitBucket</span></li>
@@ -82,7 +78,7 @@
 				<div class="content">
 					<header>
 						<div class="links">
-							{% if item.gitrepo %}<iframe src="http://ghbtns.com/github-btn.html?user=mytharcher&amp;repo={{item.gitrepo}}&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>{% endif %}
+							{% if item.gitrepo %}<iframe src="https://ghbtns.com/github-btn.html?user=mytharcher&amp;repo={{item.gitrepo}}&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>{% endif %}
 						</div>
 						<h3>{% if item.link %}<a href="{{item.link}}" target="_blank">{{item.title}}</a>{% else %}{{item.title}}{% endif %}</h3>
 						<p class="tags">
@@ -106,7 +102,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/elf-0.5.0.min.js"></script>
 <script type="text/javascript" src="/assets/js/site.js"></script>
 {% include baidu-stats.tpl %}
 

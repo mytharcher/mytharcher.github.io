@@ -10,18 +10,13 @@ pageClass: page-type-post
 	{% assign post = page %}
 	{% include meta.tpl %}
 	{{ content }}
-	{% capture permaurl %}http://{{site.blog.host}}{{ page.url }}{% endcapture %}
+	{% capture permaurl %}http://{{site.host}}{{ page.url }}{% endcapture %}
 	<!--<p class="permalink">永久链接：<a href="{{ permaurl }}">{{ permaurl }}</a></p>-->
 </article>
 <div id="disqus_thread" class="comments"></div>
 
 <ins class="adsbygoogle"
      style="display:block"
-     data-ad-client="ca-pub-7231324007393765"
+     data-ad-client="ca-pub-7015804927845255"
      data-ad-slot="7629180734"
      data-ad-format="auto"></ins>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>

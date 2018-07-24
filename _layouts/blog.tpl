@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>{{ site.blog.name }}{% if page.title %} / {{ page.title }}{% endif %}</title>
-{% include head.tpl %}
-<link href="https//{{ site.blog.host }}/blog/feed.xml" rel="alternate" title="{{ site.blog.name }}" type="application/atom+xml" />
-<link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/code/sunburst.css" />
-{% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
-{% endfor %}
-</head>
+---
+layout: page
 
-<body class="{% if page.pageClass %}{{ page.pageClass }}{% else %}{{ layout.pageClass }}{% endif %}">
+styles:
+  - /assets/css/code/sunburst.css
+  - /assets/css/blog.css
+---
 
 <div class="main">
 	{{ content }}
@@ -65,7 +58,4 @@
 	</div>
 </aside>
 
-{% include footer.tpl %}
-
-</body>
-</html>
+{% include scripts.tpl %}

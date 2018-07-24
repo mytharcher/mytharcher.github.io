@@ -3,6 +3,7 @@ safe: false
 permalink: /:categories/:title
 exclude:
   - README.md
+host: yanjunyi.com
 
 defaults:
   -
@@ -19,7 +20,6 @@ defaults:
         layout: post
 
 blog:
-    host: yanjunyi.com
     name: 闭门造轮子
     desc: 造轮子工程师的代码笔记
 

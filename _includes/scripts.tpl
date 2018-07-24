@@ -13,3 +13,4 @@ site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.blog.scrollingLoadCount }};
 </script>
 {% include baidu-stats.tpl %}
+{% include google-ad.tpl %}

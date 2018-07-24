@@ -1,6 +1,5 @@
 ---
 layout: blog
-
 pageClass: page-type-list
 ---
 

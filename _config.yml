@@ -3,7 +3,7 @@ safe: false
 permalink: /:categories/:title
 exclude:
   - README.md
-host: yanjunyi.com
+origin: https://yanjunyi.com
 
 defaults:
   -

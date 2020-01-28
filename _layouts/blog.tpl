@@ -47,7 +47,7 @@ styles:
 		<h3>Powered by</h3>
 		<p>
 			<a href="https://disqus.com/" target="_blank" title="云评论服务">Disqus</a>,
-			<a href="http://elf.js.org/" target="_blank">elf+js</a>,
+			<a href="https://elf.js.org/" target="_blank">elf+js</a>,
 			<a href="https://github.com/" target="_blank">GitHub</a>,
 			<a href="https://www.google.com/cse/" target="_blank" title="自定义站内搜索">Google Custom Search</a>,
 			<a href="https://en.gravatar.com/" target="_blank" title="统一头像标识服务">Gravatar</a>,
@@ -57,5 +57,3 @@ styles:
 		</p>
 	</div>
 </aside>
-
-{% include scripts.tpl %}

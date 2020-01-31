@@ -1,23 +1,26 @@
-
-[Disqus]: http://disqus.com/
-[elf+js]: http://elfjs.com/
-[ER]: http://www.errorrik.com/er/
-[Express]: http://expressjs.com/
+[certbot]: https://certbot.eff.org
+[Disqus]: https://disqus.com/
+[elf+js]: https://elf.js.org/
+[ER]: http://errorrik.com/er/
+[Express]: https://expressjs.com/
 [GitHub]: https://github.com/
-[Google Custom Search]: http://www.google.com/cse/
+[GitHub Pages]: https://pages.github.com/
+[Google Custom Search]: https://www.google.com/cse/
 [Google Picasa]: https://picasaweb.google.com/
-[Gravatar]: http://gravatar.com/
-[handlebars]: http://handlebarsjs.com/
-[HighlightJS]: http://softwaremaniacs.org/soft/highlight/en/
-[Hogan.js]: http://twitter.github.io/hogan.js/
+[Gravatar]: https://gravatar.com/
+[handlebars]: https://handlebarsjs.com/
+[HighlightJS]: https://highlightjs.org/
+[Hogan.js]: https://twitter.github.io/hogan.js/
 [jekyll]: https://github.com/mojombo/jekyll
+[jq]: https://stedolan.github.io/jq/manual/
 [JSDuck]: https://github.com/senchalabs/jsduck
-[jslib]: https://github.com/elfjs/jslib/
-[jslib-builder]: http://github.com/elfjs/jslib-builder/
-[Markdown]: http://daringfireball.net/projects/markdown/
-[mustache]: http://mustache.github.io/
-[node.js]: http://nodejs.org/
+[jslib]: https://github.com/mytharcher/jslib/
+[jslib-builder]: https://github.com/mytharcher/jslib-builder/
+[Let's Encrypt]: https://letsencrypt.org
+[Markdown]: https://daringfireball.net/projects/markdown/
+[Nextcloud]: https://nextcloud.com/
+[mustache]: https://mustache.github.io/
+[node.js]: https://nodejs.org/
 [SimpleGray]: https://github.com/mytharcher/SimpleGray
 [SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
-[Tangram]: http://tangram.baidu.com/
 [WordPress]: http://wordpress.org/

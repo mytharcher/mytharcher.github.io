@@ -4,17 +4,16 @@ permalink: /:categories/:title
 exclude:
   - README.md
 origin: https://yanjunyi.com
+name: 严俊羿
 
 defaults:
-  -
-    scope:
+  - scope:
         path: blog/_posts
         type: posts
     values:
         permalink: blog/posts/:title
         layout: post
-  -
-    scope:
+  - scope:
         path: discovery/_posts
     values:
         layout: post
@@ -45,7 +44,7 @@ blog:
 
 meta:
     author:
-        name: mytharcher
+        name: Junyi
         email: mytharcher@gmail.com
         disqus: tech-justlog-me                     # Disqus缩略标识
         gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID

@@ -26,12 +26,12 @@ footer p{color:#aaa; font-size:75%; line-height:1.6em;}
 .page-type-post article>h1:first-child{margin-bottom:0;}
 .page-type-post article .permalink{font:italic 85%/1.6em Arial, Helvetica, sans-serif; color:#999;}
 
-.page-type-list article h2{margin-bottom:0;}
+.page-type-list section h2{margin-bottom: .5em;}
 .page-type-list section{
 	margin: 2em 0;
 }
 .page-type-list section ul{
-	margin: .5em 0 0 2em;
+	margin-left: 2em;
 }
 .page-type-list section li time{
 	margin-right: .5em;

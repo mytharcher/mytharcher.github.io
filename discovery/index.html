@@ -14,15 +14,15 @@ title: 日新月异
 
 {% if this_year != last_year %}
 {% unless forloop.first %}
-</article>
+</section>
 {% endunless %}
-<article>
+<section>
 	<h2>{{ this_year }}</h2>
 {% endif %}
 	<h3>{{ post.date | date: "%b" }}</h3>
 	{{ post.content }}
 {% if forloop.last %}
-</article>
+</section>
 {% endif %}
 {% capture last_year %}{{ this_year }}{% endcapture %}
 

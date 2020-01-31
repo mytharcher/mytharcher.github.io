@@ -68,10 +68,10 @@ a:hover{color: #fff; text-decoration: underline;}
 #link-github:hover{background-color: #333;}
 #link-mail:hover{background-color: #595;}
 #link-mail span:after{content: "mytharcher@gmail.com"; font-size: 1rem;}
-#link-zhihu:hover{background: #0084ff;}
-#link-more:hover{background-color: #fff;}
+#link-twitter:hover{background: #27a0ef;}
+#link-zhihu:hover{background-color: #0084ff;}
 li#link-wechat span{top: 0;}
-li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
+li#link-zhihu:hover i{opacity: 1; font-size: inherit; color: #888;}
 #card ul:after{content: ""; clear: both; display: block;}
 
 @media (min-width: 801px) {
@@ -82,8 +82,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	#link-mail{left: 420px; top: 0;}
 	#link-wechat{left: 630px; top: 0;}
 	#link-github{left: 420px; top: 105px;}
-	#link-zhihu{left: 525px; top: 105px;}
-	#link-more{left: 630px; top: 105px;}
+	#link-twitter{left: 525px; top: 105px;}
+	#link-zhihu{left: 630px; top: 105px;}
 	#card ul{
 		-webkit-transition: width ease .5s;
 		-moz-transition: width ease .5s;
@@ -112,8 +112,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	li#link-mail.half{left: 0; top: 210px; width: 305px;}
 	#link-wechat{left: 315px; top: 210px;}
 	#link-github{left: 420px; top: 0;}
-	#link-zhihu{left: 420px; top: 105px;}
-	#link-more{left: 420px; top: 210px;}
+	#link-twitter{left: 420px; top: 105px;}
+	#link-zhihu{left: 420px; top: 210px;}
 }
 
 @media (min-width: 451px) and (max-width: 550px) {
@@ -123,8 +123,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	li#link-mail.half{left: 0; top: 210px; width: 410px;}
 	#link-wechat{left: 210px; top: 315px;}
 	#link-github{left: 0; top: 315px;}
-	#link-zhihu{left: 105px; top: 315px;}
-	#link-more{left: 315px; top: 315px;}
+	#link-twitter{left: 105px; top: 315px;}
+	#link-zhihu{left: 315px; top: 315px;}
 }
 @media (max-width: 480px){
 	#card,#card ul{
@@ -151,8 +151,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	li#link-mail.half{left: 0; top: 51%;}
 	#link-wechat{left: 51%; top: 76.5%;}
 	#link-github{left: 0%; top: 76.5%;}
-	#link-zhihu{left: 25.5%; top: 76.5%;}
-	#link-more{left: 76.5%; top: 76.5%;}
+	#link-twitter{left: 25.5%; top: 76.5%;}
+	#link-zhihu{left: 76.5%; top: 76.5%;}
 }
 @media (max-width: 320px) {
 	#card li{line-height: 147px;}
@@ -166,8 +166,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	li#link-mail.half{left: 0; top: 420px; width: 305px;}
 	#link-wechat{left: 210px; top: 210px;}
 	#link-github{left: 210px; top: 0;}
-	#link-zhihu{left: 210px; top: 105px;}
-	#link-more{left: 210px; top: 315px;}
+	#link-twitter{left: 210px; top: 105px;}
+	#link-zhihu{left: 210px; top: 315px;}
 }
 
 @media (max-width: 319px) {
@@ -190,6 +190,6 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	li#link-mail.half{left: 0; top: 78.5714%;}
 	#link-wechat{left: 39.2857%; top: 39.2857%;}
 	#link-github{left: 39.2857%; top: 0;}
-	#link-zhihu{left: 39.2857%; top: 20.2381%;}
-	#link-more{left: 39.2857%; top: 60.7123%;}
+	#link-twitter{left: 39.2857%; top: 20.2381%;}
+	#link-zhihu{left: 39.2857%; top: 60.7123%;}
 }*/
